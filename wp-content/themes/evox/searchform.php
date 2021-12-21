@@ -1,14 +1,11 @@
 <?php
 /**
- * The template for displaying search forms in Twenty Eleven
- *
- * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * The template for displaying search forms.
  */
 ?>
-	<form method="get" class="searchform" action="<?php echo esc_url( get_home_url( '/' ) ); ?>">
-		<input type="text" class="field Tzsearchform inputbox search-query" name="s" placeholder="<?php esc_attr_e( 'Search...', 'evox' ); ?>" />
-		<input type="submit" class="submit searchsubmit" name="submit" value="<?php esc_attr_e( 'Search', 'evox' ); ?>" />
-		<span aria-hidden='true' class='fa fa-search icon_search'></span>
-	</form>
+<form class="search-form" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<div class="input-group">
+		<input type="text" name="s" class="form-control" placeholder="<?php esc_attr_e( 'Search', 'evox' ); ?>" />
+		<button type="submit" class="btn btn-secondary" name="submit"><?php esc_html_e( 'Search', 'evox' ); ?></button>
+	</div><!-- /.input-group -->
+</form>

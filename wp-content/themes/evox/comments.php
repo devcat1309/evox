@@ -1,123 +1,97 @@
 <?php
 /**
- * The template for displaying comments
- *
- * The area of the page that contains both current comments
- * and the comment form.
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
+ * The template for displaying Comments.
  */
 
-/*
+/**
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
 if ( post_password_required() ) {
-    return;
+	return;
 }
 ?>
+<div id="comments">
+	<?php
+		if ( comments_open() && ! have_comments() ) :
+	?>
+		<h2 id="comments-title">
+			<?php
+				esc_html_e( 'No Comments yet!', 'evox' );
+			?>
+		</h2>
+	<?php
+		endif;
 
-<div id="comments" class="comments-area">
+		if ( have_comments() ) :
+	?>
+		<h2 id="comments-title">
+			<?php
+				$comments_number = get_comments_number();
+				if ( '1' === $comments_number ) {
+					printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'evox' ), get_the_title() );
+				} else {
+					printf(
+						/* translators: 1: number of comments, 2: post title */
+						_nx(
+							'%1$s Reply to &ldquo;%2$s&rdquo;',
+							'%1$s Replies to &ldquo;%2$s&rdquo;',
+							$comments_number,
+							'comments title',
+							'evox'
+						),
+						number_format_i18n( $comments_number ),
+						get_the_title()
+					);
+				}
+			?>
+		</h2>
+		<?php
+			if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+		?>
+		<nav id="comment-nav-above">
+			<h1 class="assistive-text"><?php esc_html_e( 'Comment navigation', 'evox' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'evox' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'evox' ) ); ?></div>
+		</nav>
+		<?php
+			endif;
+		?>
+		<ol class="commentlist">
+			<?php
+				/**
+				 * Loop through and list the comments. Tell wp_list_comments()
+				 * to use theme_comment() to format the comments.
+				 * If you want to overload this in a child theme then you can
+				 * define theme_comment() and that will be used instead.
+				 * See theme_comment() in my-theme/functions.php for more.
+				 */
+				wp_list_comments( array( 'callback' => 'evox_comment' ) );
+			?>
+		</ol>
+		<?php
+			if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+		?>
+		<nav id="comment-nav-below">
+			<h1 class="assistive-text"><?php esc_html_e( 'Comment navigation', 'evox' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'evox' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'evox' ) ); ?></div>
+		</nav>
+		<?php
+			endif;
 
-    <?php if ( have_comments() ) : ?>
-        <?php
-        $evox_comments_number = evox_parent_comment_counter();//get_comments_number();
+		/**
+		 * If there are no comments and comments are closed, let's leave a little note, shall we?
+		 * But we don't want the note on pages or post types that do not support comments.
+		 */
+		elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
+	?>
+		<h2 id="comments-title" class="nocomments"><?php esc_html_e( 'Comments are closed.', 'evox' ); ?></h2>
+	<?php
+		endif;
 
-        if ( '1' === $evox_comments_number ) {
-            if( is_singular('tour')){
-                $evox_comments_title = esc_html__('Review','evox');
-            }else{
-                $evox_comments_title = esc_html__('Comment','evox');
-            }
-        }else{
-            if( is_singular('tour')){
-                $evox_comments_title = esc_html__('Reviews','evox');
-            }else{
-                $evox_comments_title = esc_html__('Comments','evox');
-            }
-        }
-
-        ?>
-        <h2 class="comments-title">
-            <?php echo $evox_comments_number.' ';?><?php  echo esc_html($evox_comments_title); ?>
-        </h2>
-
-        <?php evox_comment_nav(); ?>
-
-        <ol class="comment-list">
-            <?php
-            wp_list_comments( array(
-                'style'       => 'ol',
-                'short_ping'  => true,
-                'avatar_size' => 60,
-                'callback'    => 'evox_comment',
-            ) );
-            ?>
-        </ol><!-- .comment-list -->
-
-        <?php evox_comment_nav(); ?>
-
-    <?php endif; // have_comments() ?>
-
-    <div class="tzCommentForm">
-        <?php
-        // If comments are closed and there are comments, let's leave a little note, shall we?
-        if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-            ?>
-            <p class="no-comments"><?php  esc_html_e( 'Comments are closed.', 'evox'); ?></p>
-        <?php endif; ?>
-        <?php
-        $evox_commenter = wp_get_current_commenter();
-        $evox_req      = get_option( 'require_name_email' );
-        $evox_aria_req = ( $evox_req ? " aria-required='true'" : '' );
-        $evox_comment_title = esc_html__('Leave A Comment','evox');
-        if( is_singular('tour')){
-            $evox_comment_title = esc_html__('Write a Review','evox');
-        }
-        if(!is_user_logged_in()){
-            $evox_args = array(
-                'comment_notes_after' => '',
-                'comment_field'        => '<p class="comment-form-comment"> <textarea id="comment" name="comment" cols="90" rows="4" required="required" placeholder="' . esc_attr__('Leave your comment...','evox') . '"></textarea></p>',
-                'fields' => apply_filters( 'comment_form_default_fields',
-                    array(
-                        '<div class="content-form">',
-                        'author' => '<p class="comment-form-author">'
-                            . '<input id="author" name="author" type="text" value="' . esc_attr( $evox_commenter['comment_author'] ) . '" size="30"' . $evox_aria_req . ' required="required" placeholder="'.( $evox_req ? esc_attr__('Your Name','evox') : '' ).'" /></p>',
-                        'email'  => '<p class="comment-form-email">'
-                            . '<input id="email" name="email" type="text" value="' . esc_attr(  $evox_commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $evox_aria_req . 'required="required" placeholder="'.( $evox_req ? esc_attr__('Your Email','evox') : '' ).'" /></p>',
-                        'url' => '<p class="comment-form-url">'
-                            . '<input id="url" name="url" type="text" value="' . esc_attr( $evox_commenter['comment_author_url'] ) . '" size="30"' . $evox_aria_req . ' placeholder="'.( $evox_req ? esc_attr__('Website','evox') : '' ).'" /></p>',
-                        '</div>'
-                    )
-                ),
-                'label_submit'      =>  esc_html__( 'Submit','evox'),
-                'title_reply'       =>  $evox_comment_title,
-            );
-        }else{
-            $evox_args = array(
-                'comment_notes_after' => '',
-                'comment_field'        => '<p class="comment-form-comment login"> <textarea id="comment" name="comment" cols="90" rows="4" required="required" placeholder="' . esc_attr__('Leave your comment...','evox') . '"></textarea></p>',
-                'fields' => apply_filters( 'comment_form_default_fields',
-                    array(
-                        '<div class="content-form">',
-                        'author' => '<p class="comment-form-author">'
-                            . '<input id="author" name="author" type="text" value="' . esc_attr( $evox_commenter['comment_author'] ) . '" size="30"' . $evox_aria_req . ' required="required"  placeholder="'.( $evox_req ? esc_attr__('Your Name','evox') : '' ).'" /></p>',
-                        'email'  => '<p class="comment-form-email">'
-                            . '<input id="email" name="email" type="text" value="' . esc_attr(  $evox_commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $evox_aria_req . ' required="required" placeholder="'.( $evox_req ? esc_attr__('Your Email','evox') : '' ).'" /></p>',
-                        'subject' => '<p class="comment-form-subject">',
-                        '</div>'
-                    )
-                ),
-                'label_submit'      =>  esc_html__( 'Submit','evox'),
-                'title_reply'       =>  $evox_comment_title,
-            );
-        }
-
-        ?>
-        <?php comment_form( $evox_args ); ?>
-    </div>
-
-</div><!-- .comments-area -->
+		// Show Comment Form (customized in functions.php).
+		comment_form();
+	?>
+</div><!-- /#comments -->

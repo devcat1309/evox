@@ -1,17 +1,30 @@
-=== Evox Theme ===
-
-WordPress Theme, Copyright (C) 2017 Templaza
-WordPress Theme is licensed under the GPL.
+=== Evox ===
+Contributors: them.es
+Tags: light, dark, responsive-layout, featured-images, flexible-header, microformats, post-formats, rtl-language-support, theme-options, translation-ready, accessibility-ready
+Stable tag: 3.0.3
+Tested up to: 5.7
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-
-Welcome to Evox - Travelling WordPress Theme.
+* Bootstrap Starter Theme
+* Responsive Layout
+* Customization
 
 == Installation ==
 
-You can install the theme through the WordPress installer under Themes - Install themes by searching for it.
-Alternatively, you can download the file, unzip it and move the unzipped contents to the wp-content/themes folder of your WordPress installation. You will then be able to activate the theme.
+1. In your admin panel, go to Appearance -> Themes and click the Add New button.
+2. Click Upload and Choose File, then select the theme's ZIP file. Click Install Now.
+3. Click Activate to use your new theme right away.
 
-== Documentation ==
+== Frequently Asked Questions ==
 
-The complete documentation of Interiart is located in "document" folder in this theme main folder. It is also accessable via Theme Options Panel acfter installing and activating this theme.
+= How do I change the Theme settings? =
+
+You can change the settings of your site easily.
+
+1. In your admin panel, go to Appearance -> Customize.
+2. Now you will see the Customizer
+3. You can now change your color scheme by selecting one of the predefined ones. Choose a color scheme you want from Base Color Scheme dropdown. You can preview the change in the Customizer.
+4. Should you wish to create your own color scheme or modify an existing one, you can by selecting the colors for each area listed.
+5. Once you are happy with your color changes you can click save and your changes will be reflected on your live site.
