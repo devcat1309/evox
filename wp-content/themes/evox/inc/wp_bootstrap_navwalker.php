@@ -74,8 +74,9 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 
 				$classes     = empty( $item->classes ) ? array() : (array) $item->classes;
 				if ( 0 === $depth ) {
-					$classes[] = 'nav-item'; // First level.
+					$classes[] = 'nav-item '.$depth; // First level.
 				}
+
 				$classes[]   = 'menu-item-' . $item->ID;
 				$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
 				if ( $args->has_children ) {
@@ -88,8 +89,15 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 
 				$id          = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
 				$id          = $id ? ' id="' . esc_attr( $id ) . '"' : '';
-
-				$output     .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . '>';
+                if ( 0 === $depth && 0 === strcasecmp( $item->attr_title, 'logo' )) {
+                    $header_logo = get_theme_mod( 'header_logo' );
+                    $output .= '<li class="logo-center"><a class="nav-link" href="'.esc_url(home_url()).'">
+                                <img src="'.esc_url($header_logo).'" alt="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'"/>
+                                </a></li>';
+                    $output .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . '>';
+                }else{
+                    $output     .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . '>';
+                }
 
 				if ( empty( $item->attr_title ) ) {
 					$atts['title'] = ! empty( $item->title ) ? strip_tags( $item->title ) : '';
