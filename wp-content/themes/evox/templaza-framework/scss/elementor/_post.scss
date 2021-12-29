@@ -1,0 +1,39 @@
+.templaza-widget-uiposts{
+  .ui-post-pagination{
+    .page-numbers{
+      @include tz-pagination-style();
+    }
+  }
+  .uk-slider{
+    .uk-card-media-left + .ui-post-info-wrap{
+      position:absolute;
+      width:48%;
+      background:#fff;
+      right:0;
+      top:55px;
+      bottom:55px;
+      left:auto;
+      @include box-shadow($tz-basic-theme-shadow);
+      .ui-post-introtext{
+        .cause-donate-btn{
+          a.templaza-btn{
+            display:inline-block;
+            padding:14px 35px;
+          }
+        }
+      }
+    }
+  }
+  .ui-post-meta-top{
+    a{
+      &:hover{
+        color:$tz-basic-heading-color;
+      }
+    }
+  }
+}
+.templaza-widget-uicard{
+  .uk-card-default{
+    @include transition($tz-basic-transition);
+  }
+}

@@ -1,40 +1,44 @@
 <?php
-/**
- * Template Name: Page (Default)
- * Description: Page template with Sidebar on the left side.
- *
- */
-
 get_header();
-
-the_post();
+if ( is_active_sidebar( 'sidebar-main' ) ) {
+    $content_class = 'uk-width-2-3@l uk-width-1-1 uk-width-1-1@s uk-width-1-1@m';
+}else{
+    $content_class = 'uk-width-expand@m';
+}
 ?>
-<div class="row">
-	<div class="col-md-8 order-md-2 col-sm-12">
-		<div id="post-<?php the_ID(); ?>" <?php post_class( 'content' ); ?>>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<?php
-				the_content();
 
-				wp_link_pages(
-					array(
-						'before' => '<div class="page-links">' . __( 'Pages:', 'evox' ),
-						'after'  => '</div>',
-					)
-				);
-				edit_post_link( esc_html__( 'Edit', 'evox' ), '<span class="edit-link">', '</span>' );
-			?>
-		</div><!-- /#post-<?php the_ID(); ?> -->
-		<?php
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-		?>
-	</div><!-- /.col -->
-	<?php
-		get_sidebar();
-	?>
-</div><!-- /.row -->
+    <div class="templaza-basic-single-heading  uk-text-center ">
+        <div class="uk-container">
+            <div class="templaza-heading">
+                <?php
+                the_title( '<h1 class="page-title uk-heading-small">', '</h1>' );
+                do_action('templaza_breadcrumb');
+                ?>
+            </div>
+        </div>
+    </div>
+    <div class="templaza-basic-wrap templaza-content-session uk-container uk-container-large ">
+        <div class="uk-grid-column-collapse" data-uk-grid>
+            <div class="<?php echo esc_attr($content_class);?>">
+                <div class="">
+                    <?php
+                    get_template_part( 'templaza-framework/templates/theme_pages/page');
+                    ?>
+                </div>
+            </div>
+            <?php
+            if ( is_active_sidebar( 'sidebar-main' ) ) {
+                ?>
+                <div class="uk-width-1-3@l uk-width-1-1 uk-width-1-1@s uk-width-1-1@m">
+                    <div class="templaza-sidebar">
+                        <?php dynamic_sidebar( 'sidebar-main' ); ?>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
+        </div>
+    </div>
+
 <?php
 get_footer();

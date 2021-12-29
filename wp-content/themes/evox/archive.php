@@ -1,34 +1,43 @@
 <?php
-/**
- * The Template for displaying Archive pages.
- */
-
 get_header();
-
-if ( have_posts() ) :
+$description = get_the_archive_description();
+if ( is_active_sidebar( 'sidebar-main' ) ) {
+    $content_class = 'uk-width-2-3@l uk-width-1-1 uk-width-1-1@s uk-width-1-1@m';
+}else{
+    $content_class = 'uk-width-expand@m';
+}
 ?>
-<header class="page-header">
-	<h1 class="page-title">
-		<?php
-			if ( is_day() ) :
-				printf( esc_html__( 'Daily Archives: %s', 'evox' ), get_the_date() );
-			elseif ( is_month() ) :
-				printf( esc_html__( 'Monthly Archives: %s', 'evox' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'evox' ) ) );
-			elseif ( is_year() ) :
-				printf( esc_html__( 'Yearly Archives: %s', 'evox' ), get_the_date( _x( 'Y', 'yearly archives date format', 'evox' ) ) );
-			else :
-				esc_html_e( 'Blog Archives', 'evox' );
-			endif;
-		?>
-	</h1>
-</header>
+    <div class="templaza-basic-single-heading  uk-text-center ">
+        <div class="uk-container">
+            <div class="templaza-heading">
+                <?php
+                the_archive_title( '<h1 class="page-title uk-heading-small">', '</h1>' );
+                do_action('templaza_breadcrumb');
+                if ( $description ) : ?>
+                    <div class="archive-description uk-margin-top uk-padding-small"><?php echo wp_kses( wpautop( $description ),'post' ); ?></div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+    <div class="templaza-basic-wrap templaza-content-session uk-container uk-container-large ">
+        <div class="uk-grid-column-collapse" data-uk-grid>
+            <div class="<?php echo esc_attr($content_class);?>">
+                <?php
+                get_template_part( 'templaza-framework/templates/theme_pages/archive');
+                ?>
+            </div>
+            <?php
+            if ( is_active_sidebar( 'sidebar-main' ) ) {
+                ?>
+                <div class="uk-width-1-3@l uk-width-1-1 uk-width-1-1@s uk-width-1-1@m">
+                    <div class="templaza-sidebar">
+                        <?php dynamic_sidebar( 'sidebar-main' ); ?>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
+        </div>
+    </div>
 <?php
-	get_template_part( 'archive', 'loop' );
-else :
-	// 404.
-	get_template_part( 'content', 'none' );
-endif;
-
-wp_reset_postdata(); // End of the loop.
-
 get_footer();

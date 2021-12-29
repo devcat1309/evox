@@ -1,0 +1,29 @@
+.gallery{
+	display:flex;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right:-20px;
+	.gallery-item{
+		margin:0 !important;
+		padding:10px;
+		img{
+			border:none !important;
+		}
+	}
+}
+.wp-block-gallery {
+	margin-bottom: 2rem;
+	ul.blocks-gallery-grid {
+		margin: 0;
+	}
+	figcaption {
+		margin: 0;
+		a {
+			color: $tz-basic-cover-color;
+		}
+	}
+}
+.gallery-caption, .wp-caption, figcaption {
+	margin-bottom: 0;
+	line-height: 1.7;
+}

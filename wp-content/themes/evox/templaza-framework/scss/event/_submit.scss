@@ -1,0 +1,77 @@
+#submit-event-form.wpem-form-wrapper{
+  padding:40px;
+  @include box-shadow($tz-basic-theme-shadow);
+  background:$tz-basic-archive-bg;
+  .wpem-form-title{
+    font-weight: $tz-basic-heading-font-weight;
+  }
+  .wpem-form-group{
+    .account-sign-in{
+      a{
+        @include border-radius(0);
+        padding:10px 20px;
+        background: #ccc;
+        &:hover{
+          background:$tz-basic-button-bg;
+          color:$tz-basic-button-color;
+        }
+      }
+    }
+    label{
+      margin-bottom: 5px;
+      display:block;
+    }
+    .field{
+      label{
+        line-height: 40px;
+        input[type="radio"]{
+          float:left;
+          height:40px;
+        }
+      }
+    }
+    input{
+      &[type="text"],&[type="file"]{
+        height:50px;
+        line-height: 50px;
+        @include border-radius(0);
+        border:1px solid $tz-basic-border-color;
+        &:focus{
+          background:none;
+          border-color: $tz-basic-theme-color;
+        }
+      }
+      &[type="file"]{
+        padding:0 15px;
+      }
+    }
+    select, textarea, .chosen-container{
+      height:50px;
+      line-height: 50px;
+      @include border-radius(0);
+      border:1px solid $tz-basic-border-color;
+      &:focus{
+        background:none;
+        border-color: $tz-basic-theme-color;
+      }
+    }
+    textarea{
+      line-height: 1.5em;
+    }
+    .chosen-container{
+      .chosen-choices{
+        line-height: 50px;
+      }
+    }
+  }
+  .wpem-form-footer{
+    .wpem-theme-button{
+      padding:10px 30px;
+      @include border-radius(0);
+      height:50px;
+      &:hover{
+        border:1px solid $tz-basic-button-bg-hover;
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.templaza-basic-page-content{
+  background:$tz-basic-single-content_bg;
+  padding:$tz-basic-single-content_padding;
+  .templaza-basic-page-content{
+    padding:0;
+  }
+  p{
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+div.templaza-archive{
+  .templaza-archive-item{
+    @include box-shadow($tz-basic-box-shadow);
+    margin-bottom: 0;
+    .title{
+      a {
+        color: inherit;
+      }
+    }
+    &.uk-card{
+      span.category{
+        color:#999;
+      }
+      .ui-title{
+        a{
+          color:$tz-basic-theme-color;
+        }
+      }
+    }
+    .templaza-blog-item-content{
+      background-color: $tz-basic-archive-bg;
+      padding:$tz-basic-title-blog-list-padding;
+      .templaza-blog-desc{
+        p{
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+      .templaza-blog-item-info{
+        margin-top: 25px;
+        color:$tz-basic-meta-color;
+        &.templaza-post-meta-header{
+          margin-top: 0;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  .wp-block-pullquote{
+    border:none;
+    blockquote{
+      margin:0;
+      &:before{
+        color:$tztheme-global-color;
+      }
+    }
+    p{
+      color:$tztheme-heading-color;
+    }
+    cite{
+      color:$tz-basic-body-color;
+    }
+  }
+}
+.templaza-blog-item-link{
+  padding: $tz-basic-pullquote-padding;
+  .link-icon{
+    font-size: 1.5rem;
+    color:$tztheme-global-color;
+  }
+  .link-content{
+    line-height: $tz-basic-pullquote-line-height;
+    margin: 30px 0 0;
+  }
+  a{
+    font-family: $tz-basic-quote-font;
+    font-size: $tz-basic-quote-font-size;
+    font-style: $tz-basic-pullquote-font-style;
+    font-weight: $tz-basic-pullquote-font-weight;
+  }
+}
+.templaza-blog-item .templaza-archive-gallery .uk-slidenav{
+  &.uk-slidenav-previous,
+  &.uk-slidenav-next{
+    @include border-radius(0);
+  }
+}
+div.templaza-sidebar {
+  ul, ol{
+    li {
+      margin: 10px 0;
+      font-size: $tz-basic-category-size;
+      a {
+        color: inherit;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.templaza-sticky .templaza-blog-item-title a {
+  text-decoration: underline;
+}
+.templaza-blog-list{
+  .templaza-blog-desc{
+    p{
+      &:empty{
+        display:none;
+      }
+    }
+  }
+}

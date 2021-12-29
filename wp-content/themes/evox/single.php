@@ -1,59 +1,43 @@
 <?php
-/**
- * The Template for displaying all single posts.
- */
-
 get_header();
-
-if ( have_posts() ) :
-	while ( have_posts() ) :
-		the_post();
-
-		get_template_part( 'content', 'single' );
-
-		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) :
-			comments_template();
-		endif;
-	endwhile;
-endif;
-
-wp_reset_postdata();
-
-$count_posts = wp_count_posts();
-
-if ( $count_posts->publish > '1' ) :
-	$next_post = get_next_post();
-	$prev_post = get_previous_post();
+if ( is_active_sidebar( 'sidebar-main' ) ) {
+    $content_class = 'uk-width-2-3@l uk-width-1-1 uk-width-1-1@s uk-width-1-1@m';
+}else{
+    $content_class = 'uk-width-expand@m';
+}
 ?>
-<hr class="mt-5">
-<div class="post-navigation d-flex justify-content-between">
-	<?php
-		if ( $prev_post ) {
-			$prev_title = get_the_title( $prev_post->ID );
-	?>
-		<div class="pr-3">
-			<a class="previous-post btn btn-lg btn-outline-secondary" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>" title="<?php echo esc_attr( $prev_title ); ?>">
-				<span class="arrow">&larr;</span>
-				<span class="title"><?php echo wp_kses_post( $prev_title ); ?></span>
-			</a>
-		</div>
-	<?php
-		}
-		if ( $next_post ) {
-			$next_title = get_the_title( $next_post->ID );
-	?>
-		<div class="pl-3">
-			<a class="next-post btn btn-lg btn-outline-secondary" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" title="<?php echo esc_attr( $next_title ); ?>">
-				<span class="title"><?php echo wp_kses_post( $next_title ); ?></span>
-				<span class="arrow">&rarr;</span>
-			</a>
-		</div>
-	<?php
-		}
-	?>
-</div><!-- /.post-navigation -->
+    <div class="templaza-basic-single-heading  uk-text-center ">
+        <div class="uk-container">
+            <div class="templaza-heading">
+                <?php
+                the_title( '<h1 class="entry-title uk-heading-small">', '</h1>' );
+                if ( have_posts() ) : while (have_posts()) : the_post() ;
+                    do_action('templaza_single_meta_post');
+                endwhile;
+                endif;
+                ?>
+            </div>
+        </div>
+    </div>
+    <div class="templaza-basic-wrap templaza-content-session uk-container uk-container-large ">
+        <div class="uk-grid-column-collapse" data-uk-grid>
+            <div class="<?php echo esc_attr($content_class);?>">
+                <?php
+                get_template_part( 'templaza-framework/templates/theme_pages/single');
+                ?>
+            </div>
+            <?php
+            if ( is_active_sidebar( 'sidebar-main' ) ) {
+                ?>
+                <div class="uk-width-1-3@l uk-width-1-1 uk-width-1-1@s uk-width-1-1@m">
+                    <div class="templaza-sidebar">
+                        <?php dynamic_sidebar( 'sidebar-main' ); ?>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
+        </div>
+    </div>
 <?php
-endif;
-
 get_footer();

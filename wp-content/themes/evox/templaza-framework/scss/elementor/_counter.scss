@@ -1,0 +1,19 @@
+.elementor-counter-number-prefix{
+  &:empty{
+    display:none;
+  }
+}
+.elementor-counter{
+  .elementor-counter-title{
+    text-align: left;
+    margin-top: 20px;
+  }
+  .elementor-counter-number{
+    padding-right: 5px;
+  }
+  .elementor-counter-number-suffix{
+    font-weight: normal;
+    font-size:0.4em;
+    display:contents;
+  }
+}

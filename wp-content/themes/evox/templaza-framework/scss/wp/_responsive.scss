@@ -1,0 +1,544 @@
+#rev_slider_1_1_wrapper .zeus.tparrows{cursor:pointer; min-width:70px; min-height:70px; position:absolute; display:block; z-index:1000; border-radius:50%;   overflow:hidden; background:rgba(0,0,0,0.1)}#rev_slider_1_1_wrapper .zeus.tparrows:before{font-family:'revicons'; font-size:20px; color:#ffffff; display:block; line-height:70px; text-align:center;   z-index:2; position:relative}#rev_slider_1_1_wrapper .zeus.tparrows.tp-leftarrow:before{content:'\e824'}#rev_slider_1_1_wrapper .zeus.tparrows.tp-rightarrow:before{content:'\e825'}#rev_slider_1_1_wrapper .zeus .tp-title-wrap{background:rgba(0,0,0,0.5); width:100%; height:100%; top:0px; left:0px; position:absolute; opacity:0; transform:scale(0); -webkit-transform:scale(0);  transition:all 0.3s; -webkit-transition:all 0.3s; -moz-transition:all 0.3s;  border-radius:50%}#rev_slider_1_1_wrapper .zeus .tp-arr-imgholder{width:100%; height:100%; position:absolute; top:0px; left:0px; background-position:center center; background-size:cover; border-radius:50%; transform:translatex(-100%); -webkit-transform:translatex(-100%);  transition:all 0.3s; -webkit-transition:all 0.3s; -moz-transition:all 0.3s}#rev_slider_1_1_wrapper .zeus.tp-rightarrow .tp-arr-imgholder{transform:translatex(100%); -webkit-transform:translatex(100%)}#rev_slider_1_1_wrapper .zeus.tparrows.rs-touchhover .tp-arr-imgholder{transform:translatex(0); -webkit-transform:translatex(0); opacity:1}#rev_slider_1_1_wrapper .zeus.tparrows.rs-touchhover .tp-title-wrap{transform:scale(1); -webkit-transform:scale(1); opacity:1}
+@media(min-width: 1024px) {
+  div.templaza-archive .templaza-archive-item.templaza-item-lead .title a{
+    font-size:3rem;
+    line-height: 1.2em;
+  }
+}
+@media(max-width: 1600px) {
+  .templaza-heading {
+    h1, h2, h3 {
+      color: inherit;
+      margin-bottom: 15px;
+      font-size: $tz-basic-title-single-tablet-size;
+    }
+  }
+  .elementor-widget-wp-widget-widget_upcoming_events .event_listings_class .wpem-single-event-widget .wpem-event-banner-img{
+    height:520px;
+  }
+  .elementor-widget-wp-widget-widget_upcoming_events .event_listings_class .wpem-single-event-widget .wpem-event-infomation{
+    padding:25px 30px;
+  }
+  div.templaza-sidebar{
+    margin-left:40px !important;
+    padding-left:40px !important;
+  }
+  .uk-slider .uk-slidenav{
+    display:none;
+  }
+}
+
+@media(max-width: 1366px) {
+  .templaza-header .navbar-nav > .menu-item > a{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+  .templaza-footer .tnp-subscription-minimal input.tnp-submit{
+    width:25%;
+  }
+}
+@media(max-width: 1024px) {
+  .templaza-header .navbar-nav > .menu-item > a{
+    padding-left:15px !important;
+    padding-right:15px !important;
+  }
+}
+@media(max-width: 1199.99px) {
+  .megamenu-sub-menu .module-latest-posts{
+    margin-left: 30px;
+  }
+
+  .elementor-widget-wp-widget-widget_upcoming_events .event_listings_class .wpem-single-event-widget{
+    .wpem-event-infomation{
+      padding:20px 30px;
+    }
+    .wpem-event-banner-img{
+      height:500px;
+    }
+  }
+  .templaza-footer .templaza-social li a{
+    height:50px;
+    width:50px;
+  }
+  .elementor-widget-wp-widget-widget_upcoming_events .event_listings_class .wpem-single-event-widget .wpem-event-infomation .wpem-event-details .wpem-event-title h3.wpem-heading-text{
+    font-size:36px;
+  }
+  .templaza-footer .tnp-subscription-minimal input.tnp-submit{
+    width:25%;
+  }
+  .ui-dateline .uk-slider-items li:first-child::after {
+    left: 0;
+  }
+
+  header .cause-donate-btn .templaza-btn{
+    height:50px;
+    padding-left:25px;
+    padding-right:25px;
+    font-size:16px;
+  }
+  .cause-donate-btn .templaza-btn, .templaza-btn,
+  form input[type="submit"], form button{
+    padding:10px 30px 9px;
+    font-size:16px;
+    height: 50px;
+
+  }
+  .templaza-btn,
+  .templaza-footer .tnp-subscription-minimal input.tnp-email, .templaza-footer .tnp-subscription-minimal input.tnp-submit{
+    height: 50px;
+    font-size:16px;
+  }
+  .templaza-footer .tnp-subscription-minimal input.tnp-submit{
+    font-size:16px;
+    line-height: 51px;
+  }
+  .templaza-footer .templaza-column{
+    border-left:none !important;
+  }
+  .elementor-widget-wp-widget-widget_upcoming_events .event_listings_class{
+    .wpem-single-event-widget{
+      width:50%;
+    }
+  }
+  div.templaza-sidebar.cause-sidebar{
+    //margin-left:30px !important;
+  }
+  div.templaza-sidebar{
+    margin-left:0 !important;
+    padding-left:0 !important;
+    border-left:none !important;
+    margin-top:80px;
+  }
+  header .evox-logo{
+    text-align: center;
+    max-width: 170px;
+    svg{
+      max-width:170px;
+    }
+  }
+
+  form input[type="text"], form input[type="email"], form input[type="search"],
+  .event_listings form.wpem-event-filter-wrapper input[type="text"], .event_listings form.wpem-event-filter-wrapper select,
+  .wpem-tab-pane form.wpem-event-filter-wrapper input[type="text"], .wpem-tab-pane form.wpem-event-filter-wrapper select,
+  .event_listings form .wpem-form-group .comiseo-daterangepicker-triggerbutton.ui-button,
+  .wpem-tab-pane form .wpem-form-group .comiseo-daterangepicker-triggerbutton.ui-button,
+  .event_listings form .chosen-container .chosen-single, .wpem-tab-pane form .chosen-container .chosen-single,
+  .event_listings a.load_more_events, .wpem-tab-pane a.load_more_events,
+  body .wpem-theme-button{
+    height:50px;
+    line-height:50px;
+    font-size:16px;
+  }
+  .event_listings form.wpem-event-filter-wrapper input[type="text"], .event_listings form.wpem-event-filter-wrapper select,
+  .wpem-tab-pane form.wpem-event-filter-wrapper input[type="text"], .wpem-tab-pane form.wpem-event-filter-wrapper select,
+  .event_listings form .wpem-form-group .comiseo-daterangepicker-triggerbutton.ui-button,
+  .wpem-tab-pane form .wpem-form-group .comiseo-daterangepicker-triggerbutton.ui-button,
+  .comment-form .form-submit input,
+  .event_listings form .chosen-container .chosen-single, .wpem-tab-pane form .chosen-container .chosen-single,{
+    font-size:16px;
+  }
+  .event_listings form .wpem-form-group .comiseo-daterangepicker-triggerbutton.ui-button .ui-icon-triangle-1-s,
+  .wpem-tab-pane form .wpem-form-group .comiseo-daterangepicker-triggerbutton.ui-button .ui-icon-triangle-1-s{
+    margin-top: -7px;
+  }
+  .event_listings form .chosen-container .chosen-single div, .wpem-tab-pane form .chosen-container .chosen-single div{
+    top:-6px;
+  }
+  .templaza-widget-uiposts .uk-slider .uk-card-media-left + .ui-post-info-wrap .ui-post-introtext .cause-donate-btn a.templaza-btn{
+    line-height: 50px;
+    padding:0 35px;
+    font-size:16px;
+  }
+  .templaza-horizontal-header{
+    .templaza-logo{
+      svg{
+        max-width:200px;
+      }
+    }
+  }
+  .templaza-section div.wpforms-container-full .wpforms-form input[type="date"], .templaza-section div.wpforms-container-full .wpforms-form input[type="datetime"], .templaza-section div.wpforms-container-full .wpforms-form input[type="datetime-local"], .templaza-section div.wpforms-container-full .wpforms-form input[type="email"], .templaza-section div.wpforms-container-full .wpforms-form input[type="month"], .templaza-section div.wpforms-container-full .wpforms-form input[type="number"], .templaza-section div.wpforms-container-full .wpforms-form input[type="password"], .templaza-section div.wpforms-container-full .wpforms-form input[type="search"], .templaza-section div.wpforms-container-full .wpforms-form input[type="text"],
+  .templaza-section div.wpforms-container-full .wpforms-form input[type="url"],
+  .templaza-section div.wpforms-container-full .wpforms-form input[type="submit"],
+  .templaza-section div.wpforms-container-full .wpforms-form button
+  {
+    height:50px;
+    font-size:16px;
+
+  }
+  .templaza-section div.wpforms-container-full .wpforms-form button{
+    padding:10px 30px 9px;
+  }
+  .templaza-section div.wpforms-container-full .wpforms-form textarea{
+    font-size:16px;
+  }
+  .templaza-single-content .wpem-single-event-page .wpem-single-event-footer div.wpem-listing-accordion{
+    .wpem-heading-text{
+      font-size:30px;
+    }
+  }
+  .wpem-heading-text{
+    h4{
+      font-size:28px;
+    }
+  }
+
+
+}
+@media(max-width: 1025px) {
+  .wpem-event-listings.wpem-event-listing-box-view .wpem-event-box-col{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media(max-width: 959.99px) {
+  .templaza-single-content .wpem-single-event-page .wpem-single-event-wrapper .wpem-single-event-body .wpem-single-event-body-sidebar .registration_button{
+    width:auto;
+  }
+  .templaza-heading {
+    h1, h2, h3 {
+      color: inherit;
+      margin-bottom: 10px;
+      font-size: $tz-basic-title-single-mobile-size;
+    }
+  }
+    div.templaza-archive .templaza-archive-item.templaza-item-lead .title a{
+      font-size:2.5rem;
+      line-height: 1.2em;
+    }
+  .templaza-portfolio-item{
+    .uk-margin-medium-left{
+      margin-left: 0 !important;
+    }
+  }
+  section.templaza-breadcrumb{
+    margin: 60px 0 !important;
+  }
+  section.templaza-single-area{
+    margin-top:100px !important;
+  }
+  .templaza-header .navbar-nav > .menu-item > a{
+    padding-left:16px !important;
+    padding-right:16px !important;
+  }
+  .header-golden-hearts{
+    .megamenu-trigger-hover{
+      justify-content: end;
+    }
+  }
+  header .evox-logo{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 130px;
+    svg{
+      max-width:130px;
+    }
+  }
+
+  .elementor-widget-wp-widget-widget_upcoming_events .event_listings_class .wpem-single-event-widget .wpem-event-infomation{
+    padding:20px 30px;
+  }
+  .templaza-section .templaza-sidebar{
+    border:none !important;
+  }
+  .templaza-footer .templaza-column{
+    border-left:none !important;
+  }
+  .templaza-single-tags{
+    border-bottom:1px solid $tz-basic-border-color;
+  }
+
+  .uk-dotnav {
+    margin-top: 30px !important;
+  }
+  .templaza-widget-uiposts .uk-slider .uk-card-media-left + .ui-post-info-wrap{
+    position:relative;
+    top:auto;
+    bottom:auto;
+    width:100%;
+  }
+  .event_listings .event_listings .event_listing .wpem-event-infomation .wpem-event-details,
+  .wpem-tab-pane .event_listings .event_listing .wpem-event-infomation .wpem-event-details{
+    padding:30px;
+  }
+  .event_listings .event_listings.wpem-event-listings.wpem-event-listing-list-view .wpem-event-layout-wrapper .wpem-event-banner .wpem-event-banner-img,
+  .wpem-tab-pane .event_listings.wpem-event-listings.wpem-event-listing-list-view .wpem-event-layout-wrapper .wpem-event-banner .wpem-event-banner-img{
+    width:300px;
+  }
+
+  header .header-mobilemenu-trigger{
+    button{
+      &:hover{
+        background:none;
+      }
+    }
+  }
+  .templaza-error-page{
+    padding:0 10%;
+  }
+
+}
+@media(max-width: 959px) {
+  body .templaza-header-section.header-absolute header{
+    background: none !important;
+  }
+  .templaza-horizontal-header .templaza-logo svg{
+    max-width:none;
+  }
+  .templaza-single .templaza-tag-share-box{
+    padding:0;
+  }
+}
+@media(max-width: 767.9px) {
+  .search-form-container .wpem-col{
+    padding-left:8px;
+    padding-right:8px;
+  }
+  .event_listings form .search-form-container .wpem-form-group, .wpem-tab-pane form .search-form-container .wpem-form-group{
+    margin-bottom: 16px;
+  }
+  .event_listings form .search-form-container{
+    padding:16px 22px;
+  }
+  .templaza-section div.wpforms-container-full .wpforms-form input[type="date"], .templaza-section div.wpforms-container-full .wpforms-form input[type="datetime"], .templaza-section div.wpforms-container-full .wpforms-form input[type="datetime-local"], .templaza-section div.wpforms-container-full .wpforms-form input[type="email"], .templaza-section div.wpforms-container-full .wpforms-form input[type="month"], .templaza-section div.wpforms-container-full .wpforms-form input[type="number"], .templaza-section div.wpforms-container-full .wpforms-form input[type="password"], .templaza-section div.wpforms-container-full .wpforms-form input[type="search"], .templaza-section div.wpforms-container-full .wpforms-form input[type="text"],
+  .templaza-section div.wpforms-container-full .wpforms-form input[type="url"],
+  .templaza-section div.wpforms-container-full .wpforms-form input[type="submit"], .templaza-section div.wpforms-container-full .wpforms-form button,
+  .event_listings form.wpem-event-filter-wrapper input[type="text"], .event_listings form.wpem-event-filter-wrapper select,
+  .wpem-tab-pane form.wpem-event-filter-wrapper input[type="text"], .wpem-tab-pane form.wpem-event-filter-wrapper select,
+  .event_listings form .wpem-form-group .comiseo-daterangepicker-triggerbutton.ui-button,
+  .wpem-tab-pane form .wpem-form-group .comiseo-daterangepicker-triggerbutton.ui-button,
+  .event_listings form .chosen-container .chosen-single, .wpem-tab-pane form .chosen-container .chosen-single,
+  .event_listings a.load_more_events, .wpem-tab-pane a.load_more_events, body .wpem-theme-button,
+  form.searchform input[type="text"]{
+    height:40px;
+    line-height: 40px;
+    padding-top:0;
+    padding-bottom:0;
+    font-size:14px;
+  }
+  .templaza-section div.wpforms-container-full .wpforms-form textarea{
+    font-size:14px;
+    height: 150px;
+  }
+  .event_listings form .wpem-form-group .comiseo-daterangepicker-triggerbutton.ui-button,
+  .wpem-tab-pane form .wpem-form-group .comiseo-daterangepicker-triggerbutton.ui-button,
+  .comment-form .form-submit input,
+  .event_listings form .chosen-container .chosen-single, .wpem-tab-pane form .chosen-container .chosen-single,
+  .event_listings form.wpem-event-filter-wrapper input[type="text"], .event_listings form.wpem-event-filter-wrapper select,
+  .wpem-tab-pane form.wpem-event-filter-wrapper input[type="text"], .wpem-tab-pane form.wpem-event-filter-wrapper select{
+    font-size:14px;
+  }
+  .event_listings form .chosen-container .chosen-single div, .wpem-tab-pane form .chosen-container .chosen-single div{
+    top:-10px;
+  }
+  .templaza-widget-uiposts .uk-slider .uk-card-media-left + .ui-post-info-wrap .ui-post-introtext .cause-donate-btn a.templaza-btn{
+    line-height: 37px;
+    padding:0 25px;
+  }
+  .cause-donate-btn .templaza-btn, .templaza-btn,
+  header .cause-donate-btn .templaza-btn,
+  form input[type="submit"], form button{
+    height:40px;
+    padding:7px 25px 6px;
+    line-height: 1em;
+    font-size:14px;
+  }
+  .templaza-section div.wpforms-container-full .wpforms-form input[type="submit"],
+  .templaza-section div.wpforms-container-full .wpforms-form button{
+    line-height: 36px;
+  }
+  .templaza-footer .templaza-social li a{
+    height:50px;
+    width:50px;
+  }
+
+  header .evox-logo{
+    text-align: center;
+    max-width: none;
+    svg{
+      max-width:none;
+    }
+  }
+
+
+  .templaza-footer .tnp-subscription-minimal input.tnp-submit{
+    line-height: 50px;
+    font-size:14px;
+  }
+  section.templaza-breadcrumb{
+    margin: 50px 0 !important;
+  }
+  .templaza-heading{
+    h2{
+      font-size:3rem;
+    }
+  }
+  div.wpforms-container-full .wpforms-form .wpforms-one-half, div.wpforms-container-full .wpforms-form .wpforms-three-sixths, div.wpforms-container-full .wpforms-form .wpforms-two-fourths{
+    width:100%;
+    margin-bottom: 15px;
+  }
+  div.wpforms-container-full .wpforms-form .wpforms-five-sixths, div.wpforms-container-full .wpforms-form .wpforms-four-sixths, div.wpforms-container-full .wpforms-form .wpforms-four-fifths, div.wpforms-container-full .wpforms-form .wpforms-one-fifth, div.wpforms-container-full .wpforms-form .wpforms-one-fourth, div.wpforms-container-full .wpforms-form .wpforms-one-half, div.wpforms-container-full .wpforms-form .wpforms-one-sixth, div.wpforms-container-full .wpforms-form .wpforms-one-third, div.wpforms-container-full .wpforms-form .wpforms-three-fourths, div.wpforms-container-full .wpforms-form .wpforms-three-fifths, div.wpforms-container-full .wpforms-form .wpforms-three-sixths, div.wpforms-container-full .wpforms-form .wpforms-two-fourths, div.wpforms-container-full .wpforms-form .wpforms-two-fifths, div.wpforms-container-full .wpforms-form .wpforms-two-sixths, div.wpforms-container-full .wpforms-form .wpforms-two-thirds{
+    margin-left:0;
+  }
+  .elementor-widget-wp-widget-widget_upcoming_events .event_listings_class{
+    .wpem-single-event-widget{
+      width:100%;
+      margin-bottom:0;
+    }
+  }
+   .wpem-tab-pane form .search-form-container,
+  .wpem-tab-pane .event_listings.wpem-event-listings.wpem-event-listing-list-view .wpem-event-layout-wrapper .event_listing{
+    padding:20px;
+  }
+  .wpem-dashboard-main-title.wpem-dashboard-main-filter{
+    margin-top: 0;
+  }
+  .wpem-event-organizer-tabs .event-organizer-tab-contents.wpem-tab-content.current,
+  .wpem-event-organizer-tabs .event-venue-tab-contents.wpem-tab-content.current,
+  .wpem-event-venue-tabs .event-organizer-tab-contents.wpem-tab-content.current,
+  .wpem-event-venue-tabs .event-venue-tab-contents.wpem-tab-content.current{
+    padding:0;
+  }
+  .elementor-widget-tabs .elementor-tabs .elementor-tab-title:not(:last-child){
+    margin-right: 0;
+  }
+
+  .templaza-footer .tnp-subscription-minimal input.tnp-email,
+  .templaza-footer .tnp-subscription-minimal input.tnp-submit{
+    height: 50px;
+    line-height: 51px;
+    font-size:16px;
+  }
+  .wpem-event-listings.wpem-event-listing-box-view .wpem-event-box-col {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .wpem-event-listings .wpem-event-layout-wrapper .wpem-event-banner{
+    height:auto;
+  }
+  div.templaza-sidebar{
+    .full{
+      margin-left:-20px;
+      margin-top:-20px !important;
+      margin-right: -20px;
+      margin-bottom: -20px !important;
+    }
+    .wp-block-group{
+      .full{
+        margin-bottom: auto !important;
+      }
+    }
+    .widget{
+      padding:20px;
+    }
+  }
+  .elementor-widget-wp-widget-widget_upcoming_events .event_listings_class .wpem-single-event-widget .wpem-event-infomation{
+    padding:20px;
+  }
+  div.templaza-sidebar .widget > h1, div.templaza-sidebar .widget > h2, div.templaza-sidebar .widget > h3, div.templaza-sidebar .widget > h4, div.templaza-sidebar .widget > h5, div.templaza-sidebar .widget > h6{
+    margin-bottom: 25px;
+  }
+  .templaza-single-content .wpem-single-event-page .wpem-single-event-footer .wpem-organizer-profile-wrapper .wpem-organizer-profile, .templaza-single-content .wpem-single-event-page .wpem-single-event-footer .wpem-organizer-profile-wrapper .wpem-venue-profile, .templaza-single-content .wpem-single-event-page .wpem-single-event-footer .wpem-venue-profile-wrapper .wpem-organizer-profile,
+  .templaza-single-content .wpem-single-event-page .wpem-single-event-footer .wpem-venue-profile-wrapper .wpem-venue-profile,
+  .templaza-single-content .wpem-single-event-page .wpem-single-event-footer div.wpem-listing-accordion,
+  .templaza-single-content .wpem-single-event-page .wpem-single-event-wrapper .wpem-single-event-body .wpem-single-event-body-sidebar,
+  .templaza-event-box{
+    padding:20px;
+  }
+  .templaza-single-content .wpem-single-event-page .wpem-single-event-footer {
+    .wpem-organizer-profile-wrapper .wpem-organizer-profile,
+    .wpem-venue-profile-wrapper .wpem-venue-profile{
+      .uk-card-body{
+        padding:0;
+        .wpem-heading-text{
+          margin-top: 30px !important;
+        }
+      }
+    }
+
+  }
+}
+@media(max-width: 650px) {
+  .templaza-footer .tnp-subscription-minimal input.tnp-submit{
+    width:30%;
+  }
+  body .wpem-event-listings-header .wpem-event-layout-action-wrapper .wpem-event-layout-action{
+    @include border-radius(0);
+  }
+  .wpem-event-listings .wpem-event-layout-wrapper .wpem-event-action-url:last-child{
+    display:block;
+  }
+  .event_listings .event_listings.wpem-event-listings.wpem-event-listing-list-view .wpem-event-layout-wrapper .wpem-event-banner .wpem-event-banner-img,
+  .wpem-tab-pane .event_listings.wpem-event-listings.wpem-event-listing-list-view .wpem-event-layout-wrapper .wpem-event-banner .wpem-event-banner-img{
+    width:100%;
+  }
+  .wpem-event-listings.wpem-event-listing-list-view .wpem-event-layout-wrapper .wpem-event-banner{
+    float:none;
+    padding-right:0;
+    width:100%;
+    height:350px;
+  }
+
+  .event_listings .event_listings .event_listing .wpem-event-infomation .wpem-event-details{
+    padding:30px 30px 10px 30px;
+  }
+  .wpem-tab-pane .event_listings .event_listing .wpem-event-infomation .wpem-event-details{
+    padding:40px 0 0 0;
+  }
+  .wpem-event-organizer-tabs .wpem-tabs-wrapper .wpem-tabs-wrap, .wpem-event-venue-tabs .wpem-tabs-wrapper .wpem-tabs-wrap{
+    padding-right: 0;
+  }
+  .wpem-event-organizer-tabs .wpem-tabs-wrapper .wpem-tabs-wrap .wpem-tab-link,
+  .wpem-event-venue-tabs .wpem-tabs-wrapper .wpem-tabs-wrap .wpem-tab-link{
+    margin: 20px 0 0;
+  }
+  .templaza-single-comment form input#comment-email{
+    margin-top: 0;
+  }
+  .templaza-section div.wpforms-container-full .wpforms-form .wpforms-field{
+    padding:0;
+  }
+  div.wpforms-container-full .wpforms-form .wpforms-submit-container{
+    padding-top:15px;
+  }
+  .uk-container{
+    padding-right:20px;
+    padding-left:20px;
+  }
+  .heading-highlighted-text{
+    white-space: break-spaces;
+  }
+
+}
+@media(max-width: 600px) {
+  .venue-related-data-counter .wpem-available-events-number-icon{
+    margin-top: 40px;
+  }
+  .organizer-related-data-wrapper .show-organizer-info, .venue-related-data-wrapper .show-venue-info{
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+@media(max-width: 480px) {
+  .templaza-footer .tnp-subscription-minimal input.tnp-submit {
+    width: 35%;
+  }
+  .templaza-footer .tnp-subscription-minimal input.tnp-email,
+  .templaza-footer .tnp-subscription-minimal input.tnp-submit{
+    height: 40px;
+    line-height: 41px;
+    font-size:14px;
+  }
+  .templaza-footer .templaza-social li a{
+    height:40px;
+    width:40px;
+    font-size:14px;
+  }
+  header .evox-logo{
+    padding-left: 30px;
+  }
+}

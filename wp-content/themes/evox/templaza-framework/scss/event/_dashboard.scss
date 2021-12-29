@@ -1,0 +1,155 @@
+.wpem-main-vmenu-dashboard-wrapper .wpem-main-vmenu-dashboard-nav ul.wpem-main-vmenu-dashboard-ul{
+  border:none;
+}
+.wpem-main-vmenu-dashboard-nav{
+  .wpem-main-vmenu-dashboard-ul{
+    .wpem-main-vmenu-dashboard-li{
+      margin-bottom: 10px;
+      h5{
+        margin:0;
+      }
+      a.wpem-main-vmenu-dashboard-link {
+        font-size:22px;
+        color:$tz-basic-body-color;
+        padding:15px;
+        text-align: center;
+        border:none !important;
+        &.wpem-main-vmenu-dashboard-link{
+          &.wpem-main-vmenu-dashboard-link-active,
+          &:hover{
+            border:none;
+            background:$tz-basic-button-bg;
+            color:$tz-basic-button-color;
+            font-weight: $tz-basic-heading-font-weight;
+            i{
+              color:$tz-basic-button-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.wpem-dashboard-main-title.wpem-dashboard-main-filter{
+  h3.wpem-theme-text{
+    font-weight: $tz-basic-heading-font-weight;
+  }
+  a.wpem-dashboard-header-btn{
+    background:$tz-basic-archive-bg;
+    @include border-radius(0);
+    color:$tz-basic-body-color;
+    border:none;
+    i[class^="wpem-icon-"]{
+      color:$tz-basic-body-color;
+    }
+    &:hover{
+      background:$tz-basic-button-bg;
+      color:$tz-basic-button-color;
+      i[class^="wpem-icon-"]{
+        color:$tz-basic-button-color;
+      }
+    }
+  }
+}
+
+.wpem-main-vmenu-dashboard-wrapper{
+  .wpem-main-vmenu-dashboard-content-wrap{
+    .wpem-dashboard-events-block-wrap{
+      .wpem-dashboard-event-list-wrapper{
+        .wpem-dashboard-event-list{
+          border:none;
+          @include box-shadow($tz-basic-theme-shadow);
+          background:$tz-basic-archive-bg;
+          @include border-radius(0);
+          &:hover{
+            @include box-shadow(none);
+          }
+          .wpem-dashboard-event-inner-list-wrap{
+            padding:15px 20px;
+            .wpem-dashboard-event-name{
+              h5{
+                margin:0;
+                a{
+                  color:inherit;
+                  &:hover{
+                    color:inherit;
+                  }
+                }
+                small{
+                  margin: 0 0 0 10px;
+                  padding: 0 10px;
+                }
+              }
+            }
+          }
+          .wpem-dashboard-event-datetime-location{
+            padding:15px 20px;
+            border-top:1px solid #f5f2ed;
+            .wpem-dashboard-event-date-time,
+            .wpem-dashboard-event-location{
+              &:before{
+                color:$tz-basic-theme-color;
+              }
+            }
+          }
+          .wpem-dboard-event-action{
+            .wpem-dboard-event-act-btn{
+              a{
+                color:$tz-basic-body-color;
+                &:hover{
+                  color:$tz-basic-button-color;
+                }
+              }
+            }
+          }
+        }
+        .wpem-dashboard-event-list-body{
+
+          .wpem-dashboard-event-placeholder{
+            font-size:15px;
+            strong{
+              border:none;
+            }
+          }
+        }
+        .wpem-dashboard-event-list{
+          .wpem-event-dashboard-information{
+            padding:10px 40px 30px 20px;
+
+            .wpem-event-dashboard-information-wrapper{
+              .wpem-event-dashboard-information-table{
+                h4.wpem-event-dashboard-information-title-box{
+                  font-weight:$tz-basic-heading-font-weight;
+                  color:$tz-basic-heading-color;
+                  border-bottom:1px solid $tz-basic-theme-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+table.wpem-responsive-table-wrapper tbody tr td .wpem-dboard-event-action .wpem-dboard-event-act-btn a::before,
+.wpem-main-vmenu-dashboard-wrapper .wpem-main-vmenu-dashboard-content-wrap .wpem-dashboard-events-block-wrap .wpem-dashboard-event-list-wrapper .wpem-dashboard-event-list .wpem-dboard-event-action .wpem-dboard-event-act-btn a::before{
+  font-size:14px;
+}
+
+.organizer-related-data-wrapper .show-organizer-info .wpem-list-group .organizer-name-list .organizer-list-items a:hover .wpem-event-organizer-conunt-number,
+.venue-related-data-wrapper .show-venue-info .wpem-list-group .venue-name-list .venue-list-items a:hover .wpem-event-venue-conunt-number{
+  background-color:$tz-basic-theme-color;
+}
+.organizer-related-data-wrapper .show-organizer-info,
+.venue-related-data-wrapper .show-venue-info{
+  .wpem-list-group{
+    &:hover{
+      background:#fff;
+    }
+    .venue-list-items, .organizer-list-items{
+      &:not(:last-child){
+        border-bottom: 1px solid $tz-basic_border-color2;
+      }
+    }
+  }
+}

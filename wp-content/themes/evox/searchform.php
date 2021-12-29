@@ -1,11 +1,7 @@
 <?php
-/**
- * The template for displaying search forms.
- */
+
 ?>
-<form class="search-form" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<div class="input-group">
-		<input type="text" name="s" class="form-control" placeholder="<?php esc_attr_e( 'Search', 'evox' ); ?>" />
-		<button type="submit" class="btn btn-secondary" name="submit"><?php esc_html_e( 'Search', 'evox' ); ?></button>
-	</div><!-- /.input-group -->
+<form method="get" class="searchform uk-position-relative" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+    <input type="text" class="field uk-input inputbox search-query uk-margin-remove-vertical" name="s" placeholder="<?php esc_attr_e( 'Search...', 'evox');?>" />
+    <button type="submit" class="submit searchsubmit has-button-icon uk-position-right" name="submit" data-uk-icon="search"></button>
 </form>

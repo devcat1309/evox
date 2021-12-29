@@ -1,30 +1,45 @@
-=== Evox ===
-Contributors: them.es
-Tags: light, dark, responsive-layout, featured-images, flexible-header, microformats, post-formats, rtl-language-support, theme-options, translation-ready, accessibility-ready
-Stable tag: 3.0.3
-Tested up to: 5.7
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+------------
+@package  – Golden Hearts – Golden Hearts WordPress Theme.
+------------
+@copyright Copyright (C) 2011-2021 TemPlaza.com. All Rights Reserved.
+@license GNU General Public License version 2 or later
+@authors TemPlaza.com
+------------
 
-== Description ==
-* Bootstrap Starter Theme
-* Responsive Layout
-* Customization
+Golden hearts is a creative and inherently flexible theme designed to make a solid and respectable online platform for a variety of projects relating to NGOs, charity events, campaigns. Spread the awareness for a cause in a professional way with this theme and popularize your organizations today.
 
-== Installation ==
+------------
 
-1. In your admin panel, go to Appearance -> Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's ZIP file. Click Install Now.
-3. Click Activate to use your new theme right away.
+Required Plugins:
 
-== Frequently Asked Questions ==
++ TemPlaza Framework Plugin: Included in download package.
++ TemPlaza Elements Plugin: Included in download package.
++ Redux Framework:  https://wordpress.org/plugins/redux-framework/
++ Elementor Website Builder:  https://wordpress.org/plugins/elementor/
++ Contact Form by WPForms:  https://wordpress.org/plugins/wpforms-lite/
 
-= How do I change the Theme settings? =
+------------
 
-You can change the settings of your site easily.
+Need Help?
 
-1. In your admin panel, go to Appearance -> Customize.
-2. Now you will see the Customizer
-3. You can now change your color scheme by selecting one of the predefined ones. Choose a color scheme you want from Base Color Scheme dropdown. You can preview the change in the Customizer.
-4. Should you wish to create your own color scheme or modify an existing one, you can by selecting the colors for each area listed.
-5. Once you are happy with your color changes you can click save and your changes will be reflected on your live site.
++ Documentation: https://document.templaza.com/golden-hearts/
+
++ Support Desk System
+
+https://www.templaza.com/forums.html
+
+It includes two supporting systems: the Ticket system, by submitting a ticket about your problem to us, member will receive answer to the problem. It is also fast and easy to check whether your problem has been solved and how it is fixed. The second worth-mentioning supporting system is FAQ includes a lot of useful information to be found.
+
++ E-mail
+
+It is also possible to e-mail to support@templaza.com in order to ask them for help. 
+
+------------
+
+Note: Media files was not included in download package.
+
+------------
+
+Website: http://www.templaza.com/
+Facebook: https://www.facebook.com/templaza
+Twitter: https://twitter.com/templazavn

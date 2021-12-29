@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="573a899e-67c0-4286-bc08-4309eb15019e" name="evox">
+        <fileTransfer rootFolder="/home/fnguye73/daotaoantoanbucxa.vn/DocumentRoot/evox" accessType="SFTP" host="failover010.tenten.cloud" port="9090" sshConfigId="d8fbe90a-b63d-42ba-b7da-956693b84c96" sshConfig="fnguye73@failover010.tenten.cloud:9090 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
