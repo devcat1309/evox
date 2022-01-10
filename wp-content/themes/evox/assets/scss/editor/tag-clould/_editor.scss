@@ -1,0 +1,29 @@
+.wp-block-tag-cloud, .tagcloud {
+
+	&.aligncenter {
+		text-align: center;
+	}
+	a{
+		float: left;
+		margin: $evox-tagcloud-margin;
+		padding: $evox-tagcloud-padding;
+		text-decoration: none;
+		background: $evox-tagcloud-bg;
+		color: $evox-tagcloud-color;
+		border: $evox-tagcloud-border;
+		border-radius: $evox-tagcloud-border-radius;
+		@include transition($evox-transition);
+		font-size: $evox-tagcloud-font-size;
+		text-transform: capitalize;
+		&:hover{
+			background:$evox-button-bg;
+			color:$evox-button-color;
+			@include transition($evox-transition);
+		}
+	}
+	&:after{
+		content: '';
+		clear: both;
+		display: block;
+	}
+}

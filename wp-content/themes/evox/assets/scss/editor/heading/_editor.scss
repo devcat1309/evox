@@ -1,0 +1,68 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	clear: both;
+	font-family: $evox-heading-font;
+	font-weight: $evox-heading-font-weight;
+	color:$evox-heading-color;
+	strong {
+		font-weight: $evox-heading-font-weight-strong;
+	}
+	a{
+		color:$evox-heading-color;
+		&:hover {
+			color:$evox-heading-color-hover;
+		}
+	}
+}
+
+h1,
+.h1 {
+	font-size: $evox-heading-h1-size;
+	line-height: $evox-heading-h1-line-height;
+	font-weight: $evox-heading-h1-weight;
+}
+
+h2,
+.h2 {
+	font-size: $evox-heading-h2-size;
+	line-height: $evox-heading-h2-line-height;
+	font-weight: $evox-heading-h2-weight;
+}
+
+h3,
+.h3 {
+	font-size: $evox-heading-h3-size;
+	line-height: $evox-heading-h3-line-height;
+	font-weight: $evox-heading-h3-weight;
+}
+
+h4,
+.h4 {
+	font-size: $evox-heading-h4-size;
+	line-height: $evox-heading-h4-line-height;
+	font-weight: $evox-heading-h4-weight;
+}
+
+h5,
+.h5 {
+	font-size: $evox-heading-h5-size;
+	line-height: $evox-heading-h5-line-height;
+	font-weight: $evox-heading-h5-weight;
+}
+
+h6,
+.h6 {
+	font-size: $evox-heading-h6-size;
+	line-height: $evox-heading-h6-line-height;
+	font-weight: $evox-heading-h6-weight;
+}

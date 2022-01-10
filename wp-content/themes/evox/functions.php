@@ -281,16 +281,7 @@ if ( ! class_exists( 'Evox_Handler' ) ) {
 			$evox_plugins = array(
 
 				// This is an example of how to include a plugin pre-packaged with a theme
-				array(
-					'name' => esc_html__('TemPlaza Framework', 'evox'), /* The plugin name */
-					'slug' => 'templaza-framework', /* The plugin slug (typically the folder name) */
-					'source' => get_template_directory_uri() . '/plugins/templaza-framework.zip', /* The plugin source */
-					'required' => true, /* If false, the plugin is only 'recommended' instead of required */
-					'version' => '1.0.2', /* E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented */
-					'force_activation' => false, /* If true, plugin is activated upon theme activation and cannot be deactivated until theme switch */
-					'force_deactivation' => false, /* If true, plugin is deactivated upon theme switch, useful for theme-specific plugins */
-					'external_url' => '', /* If set, overrides default API URL and points to an external URL */
-				),
+
 
 				array(
 					'name' => 'Elementor Website Builder',
@@ -352,16 +343,17 @@ if ( ! class_exists( 'Evox_Handler' ) ) {
 
 		function evox_basic_register_front_end_styles()
 		{
-			wp_enqueue_style( 'evox-basic-fonts', evox_basic_fonts_url(), array(), null );
-			wp_enqueue_style('evox-basic-style-min', get_template_directory_uri() . '/assets/css/style.min.css', false );
-			wp_enqueue_style('evox-basic-fontawesome', get_template_directory_uri() . '/assets/css/fontawesome/css/all.min.css', false );
+			wp_enqueue_style( 'evox-fonts', evox_basic_fonts_url(), array(), null );
+			wp_enqueue_style('evox-uikit', get_template_directory_uri() . '/assets/css/uikit.min.css', false );
+			wp_enqueue_style('evox-style-all', get_template_directory_uri() . '/assets/scss/style.css', false );
+			wp_enqueue_style('evox-fontawesome', get_template_directory_uri() . '/assets/css/fontawesome/css/all.min.css', false );
 		}
 
 		function evox_basic_register_front_end_scripts()
 		{
-			wp_enqueue_script('evox-basic-script-uikit', get_template_directory_uri() . '/assets/js/uikit.min.js', false );
-			wp_enqueue_script('evox-basic-script-uikit-icon', get_template_directory_uri() . '/assets/js/uikit-icons.min.js', false );
-			wp_enqueue_script('evox-basic-script-basic', get_template_directory_uri() . '/assets/js/basic.js', array('jquery') );
+			wp_enqueue_script('evox-script-uikit', get_template_directory_uri() . '/assets/js/uikit.min.js', false );
+			wp_enqueue_script('evox-script-uikit-icon', get_template_directory_uri() . '/assets/js/uikit-icons.min.js', false );
+			wp_enqueue_script('evox-script-basic', get_template_directory_uri() . '/assets/js/basic.js', array('jquery') );
 		}
 
 		function evox_basic_register_theme_scripts()

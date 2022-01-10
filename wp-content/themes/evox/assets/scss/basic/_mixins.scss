@@ -1,0 +1,186 @@
+// Responsive breakpoints mixin
+@mixin add_variables( $view: frontend ) {
+	@if frontend == $view {
+		:root {
+			@content;
+		}
+	}
+	@if editor == $view {
+		:root,
+		body {
+			@content;
+		}
+	}
+}
+@mixin transform($transform) {
+	transform: $transform ;
+}
+@mixin box-shadow($shadow) {
+	box-shadow: $shadow ;
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+}
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+@mixin transition($transition...) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+// Button style
+// - Applies button styles to blocks and elements that share them.
+@mixin tz-basic-wp-button-style() {
+	border: $evox-button-border-width solid transparent;
+	cursor: pointer;
+	font-weight: $evox-button-font-weight;
+	font-size: $evox-button-font-size;
+	line-height: $evox-button-line-height;
+	padding:$evox-button-padding;
+	text-decoration: none;
+	text-transform: $evox-button-transform;
+	@include transition($evox-transition);
+	font-family:$evox-button-font-family;
+
+	// Standard Button Color Relationship Logic
+	&:not(:hover):not(:active) {
+		// Text colors
+		&:not(.has-text-color) {
+			color: $evox-button-color;
+
+			// Nested
+			.has-background & {
+				color: $evox-button-color;
+
+				&.has-background {
+					color: $evox-button-color;
+				}
+			}
+		}
+
+		// Background-colors
+		&:not(.has-background) {
+			background-color: $evox-button-bg;
+
+			// Nested
+			.has-background & {
+				background-color: $evox-button-bg;
+			}
+		}
+	}
+
+	// Hover Button color should match parent element foreground color
+	&:hover,
+	&:active {
+		background-color: $evox-button-bg-hover;
+		border-color: transparent;
+		color: $evox-button-color-hover;
+		@include transition($evox-transition);
+	}
+
+	// Disabled Button colors
+	&:disabled {
+		background-color: $evox-button-disable-bg;
+		border-color: $evox-button-disable-border-color;
+		color: $evox-button-disable-color;
+	}
+}
+@mixin tz-basic-button-style() {
+	border: $evox-button-border-width solid transparent;
+	border-radius: $evox-button-radius;
+	cursor: pointer;
+	font-weight: $evox-button-font-weight;
+	font-size: $evox-button-font-size;
+	line-height: $evox-button-line-height;
+	padding:$evox-button-padding;
+	text-decoration: none;
+	text-transform: $evox-button-transform;
+	@include transition($evox-transition);
+
+	// Standard Button Color Relationship Logic
+	&:not(:hover):not(:active) {
+		// Text colors
+		&:not(.has-text-color) {
+			color: $evox-button-color;
+
+			// Nested
+			.has-background & {
+				color: $evox-button-color;
+
+				&.has-background {
+					color: $evox-button-color;
+				}
+			}
+		}
+
+		// Background-colors
+		&:not(.has-background) {
+			background-color: $evox-button-bg;
+
+			// Nested
+			.has-background & {
+				background-color: $evox-button-bg;
+			}
+		}
+	}
+
+	// Hover Button color should match parent element foreground color
+	&:hover,
+	&:active {
+		background-color: $evox-button-bg-hover;
+		border-color: transparent;
+		color: $evox-button-color-hover;
+		@include transition($evox-transition);
+	}
+
+	// Disabled Button colors
+	&:disabled {
+		background-color: $evox-button-disable-bg;
+		border-color: $evox-button-disable-border-color;
+		color: $evox-button-disable-color;
+	}
+}
+
+@mixin innerblock-margin-clear($container) {
+
+	// Clear the top margin for the first-child.
+	> #{$container} > *:first-child {
+		margin-top: 0;
+	}
+
+	// Last child that is not the appender.
+	> #{$container} > *:last-child:not(.block-list-appender) {
+		margin-bottom: 0;
+	}
+
+	// When selected, the last item becomes the second last because of the appender.
+	&.has-child-selected > #{$container} > *:nth-last-child(2),
+	&.is-selected > #{$container} > *:nth-last-child(2) {
+		margin-bottom: 0;
+	}
+}
+@mixin tz-pagination-style() {
+	display: inline-flex;
+	padding: 7px 15px;
+	min-width: 44px;
+	min-height: 44px;
+	color: $evox-paginate;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	transition: all 0.3s linear;
+	background:#fff;
+	@include border-radius(0);
+	&:hover,&.current{
+		background:$evox-button-bg;
+		color:$evox-button-color;
+	}
+	&.next,&.prev{
+		padding:7px 10px;
+	}
+}

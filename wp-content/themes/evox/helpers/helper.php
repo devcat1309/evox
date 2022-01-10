@@ -11,16 +11,12 @@ if ( ! function_exists( 'evox_basic_fonts_url' ) ) {
 		$font_subsets = 'latin,latin-ext';
 
 		/* translators: If there are characters in your language that are not supported by Barlow, translate this to 'off'. Do not translate into your own language. */
-		if ('off' !== esc_html_x('on', 'Barlow Semi Condensed: on or off', 'evox')) {
-			$evox_font_families[] = 'Barlow Semi Condensed:300,400,600';
+		if ('off' !== esc_html_x('on', 'Cormorant Garamond: on or off', 'evox')) {
+			$evox_font_families[] = 'Cormorant Garamond:500,600';
 		}
 		/* translators: If there are characters in your language that are not supported by Saira, translate this to 'off'. Do not translate into your own language. */
-		if ('off' !== esc_html_x('on', 'Inter font: on or off', 'evox')) {
-			$evox_font_families[] = 'Inter:400,600';
-		}
-		/* translators: If there are characters in your language that are not supported by Saira, translate this to 'off'. Do not translate into your own language. */
-		if ('off' !== esc_html_x('on', 'Merriweather: on or off', 'evox')) {
-			$evox_font_families[] = 'Merriweather:300,400';
+		if ('off' !== esc_html_x('on', 'Lato: on or off', 'evox')) {
+			$evox_font_families[] = 'Lato:700,300';
 		}
 
 		if ($evox_font_families) {

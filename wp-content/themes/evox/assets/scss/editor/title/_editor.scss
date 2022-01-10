@@ -1,0 +1,24 @@
+.edit-post-visual-editor__post-title-wrapper{
+	background:$evox-single-title-bg;
+
+}
+.wp-block{
+	&.editor-post-title__block {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		margin-bottom: 80px;
+		max-width: 900px;
+		margin-top: 0;
+		.editor-post-title__input{
+			font-family: $evox-heading-font;
+			font-size:$evox-title-single-size;
+			font-weight: $evox-title-single-weight;
+			color:$evox-single-title-color;
+			text-transform: $evox-single-title-transform;
+			text-align: center;
+			&::placeholder{
+				color:$evox-single-title-color;
+			}
+		}
+	}
+}

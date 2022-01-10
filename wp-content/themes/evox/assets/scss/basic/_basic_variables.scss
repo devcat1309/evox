@@ -1,0 +1,211 @@
+
+$evox-spacing-horizontal:25px;
+$evox-spacing-vertical:20px;
+
+$evox-body-font:'Cormorant Garamond', serif;
+$evox-body-font-size:16px;
+$evox-body-color:#55595a;
+$evox-body-font-weight:400;
+$evox-body-line-height:1.7;
+$evox-body-background:#F5F2ED;
+$evox-border-color:#e5e5e5;
+$evox_border-color2:#F5F2ED;
+
+$evox-transition:all 0.3s linear;
+
+$evox-a-color:inherit;
+$evox-a-color-hover:#060606;
+
+$evox-paginate:#999;
+$evox-paginate-current:#333;
+
+$evox-meta-color:#aaa;
+$evox-meta-color-hover:#666;
+$evox-meta-font-size:0.875rem;
+$evox-meta-line-height:1.5;
+
+$evox-form-font-size:$evox-body-font-size;
+$evox-form-label-weight:600;
+$evox-form-input-weight:300;
+$evox-input-padding:0 15px;
+$evox-input-button-padding:0 30px;
+$evox-input-inside-padding:0;
+$evox-input-height:60px;
+$evox-input-line-height:60px;
+$evox-input-border:1px solid $evox_border-color2;
+$evox-input-border-radius:0;
+$evox-input-bg-focus:#fff;
+
+$evox-theme-color:#FED23D;
+$evox-theme-shadow: 0 5px 20px rgba(170,170,170,0.1);
+
+$evox-button-bg:#FED23D;
+$evox-button-bg-hover:#060606;
+$evox-button-color:#060606;
+$evox-button-color-hover:#FED23D;
+$evox-button-outline-color:#FED23D;
+$evox-button-padding:14px 35px;
+$evox-button-transform:uppercase;
+$evox-button-border-width:2px;
+$evox-button-radius:0;
+$evox-button-font-family:'Lato', sans-serif;
+$evox-button-font-size:18px;
+$evox-button-font-weight:600;
+$evox-button-line-height:1.5;
+$evox-button-disable-bg: rgba(255, 255, 255, 0.5);
+$evox-button-disable-border-color:rgba(255, 255, 255, 0.5);
+$evox-button-disable-color:#39414d;
+
+$evox-quote-font:"Merriweather", Sans-serif;
+$evox-quote-font-size:1.4rem;
+$evox-quote-font-style:normal;
+$evox-quote-font-weight:400;
+$evox-quote-bg:transparent;
+$evox-quote-font-cite:0.9rem;
+$evox-quote-color:#333333;
+$evox-quote-border-color: #333;
+$evox-quote-line-height:1.5em;
+$evox-quote-author:$evox-body-color;
+$evox-quote-content-margin:20px;
+$evox-quote-padding:0;
+$evox-quote-large-margin:40px 20px;
+$evox-quote-large-padding:0;
+$evox-quote-font-size-large:2rem;
+$evox-quote-font-size-cite-large:1.2rem;
+$evox-quote-font-style-large:normal;
+$evox-quote-line-height-large:1.5em;
+$evox-quote-padding-large: 45px 50px;
+
+
+$evox-pullquote-font-style:normal;
+$evox-pullquote-font-cite:0.9rem;
+$evox-pullquote-font-weight:400;
+$evox-pullquote-line-height:1.5em;
+$evox-pullquote-color:$evox-body-color;
+$evox-pullquote-padding:40px 80px;
+$evox-pullquote-padding-mobile:30px;
+$evox-pullquote-border-width:2px;
+$evox-pullquote-wide-margin: auto;
+
+
+$evox-list-margin: 0.7em 0;
+
+$evox-menu-font:'Lato', sans-serif;
+$evox-menu-bg:transparent;
+$evox-menu-weight:400;
+$evox-menu-padding:43px 30px;
+$evox-menu-size:14px;
+$evox-menu-color:#ffffff;
+$evox-menu-color-hover:#FED23D;
+$evox-menu-dropdown-bg:#333333 ;
+$evox-menu-dropdown-bg-hover:#333333 ;
+$evox-menu-dropdown-color:#ffffff;
+$evox-menu-dropdown-color-hover:#FED23D;
+
+$evox-heading-font:'Lato', sans-serif;
+$evox-heading-font-weight:600;
+$evox-heading-font-weight-strong:600;
+$evox-heading-color:#060606;
+$evox-heading-color-hover:#060606;
+$evox-heading-line-height:1.1em;
+
+
+$evox-heading-h1-size: 2.625rem;
+$evox-heading-h2-size: 2.1642rem;
+$evox-heading-h3-size: 1.7843rem;
+$evox-heading-h4-size: 1.4711rem;
+$evox-heading-h5-size: 1.2129rem;
+$evox-heading-h6-size: 1.1545rem;
+
+$evox-heading-h1-weight: 600;
+$evox-heading-h2-weight: 600;
+$evox-heading-h3-weight: 600;
+$evox-heading-h4-weight: 600;
+$evox-heading-h5-weight: 600;
+$evox-heading-h6-weight: 600;
+
+$evox-heading-h1-line-height: 1em;
+$evox-heading-h2-line-height: 1em;
+$evox-heading-h3-line-height: 1.1em;
+$evox-heading-h4-line-height: 1.2em;
+$evox-heading-h5-line-height: 1.2em;
+$evox-heading-h6-line-height: 1.2em;
+
+
+$evox-title-single-size: 3.25rem;
+$evox-title-single-tablet-size: 3rem;
+$evox-title-single-mobile-size: 2.6rem;
+$evox-title-single-weight: 600;
+$evox-title-single-line-height: 1.1em;
+$evox-single-content_bg: #ffffff;
+$evox-single-content_padding: 40px;
+
+
+$evox-title-blog-list-size:40px;
+$evox-title-blog-list-size-small:1.8rem;
+$evox-title-blog-list-weight:600;
+$evox-title-blog-list-padding:32px 40px 35px;
+
+$evox-title-page-size: 3.25rem;
+$evox-title-page-weight: 600;
+$evox-single-title-color: #fff;
+$evox-single-title-bg: #222;
+$evox-single-title-transform: uppercase;
+
+$evox-blog-heading-size:3.25rem;
+
+/* Block variables*/
+$evox-latest-post-margin:0.8em 0;
+$evox-latest-post-grid-margin-bottom:0.4em;
+
+$evox-cover-color:#fff;
+$evox-cover-bg:#000;
+$evox-cover-min-height:400px;
+$evox-cover-line-height:1.2;
+$evox-cover-link-color:#fff;
+
+$evox-figcaption-size:0.75rem;
+$evox-figcaption-margin-top:0.5em;
+$evox-figcaption-margin-bottom:2em;
+
+$evox-latest-font:$evox-heading-font;
+$evox-latest-posts-size:1.2rem;
+$evox-latest-posts-line-height:1.2em;
+$evox-latest-posts-weight:400;
+$evox-latest-posts-divi-border: 2px solid rgba(0,0,0,0.7);
+$evox-latest-posts-divi-item: 1px solid rgba(0,0,0,0.15);
+
+$evox-category-size:0.875rem;
+$evox-category-list-current-color:#060606;
+
+$evox-separator-height:2px;
+$evox-separator-color:rgba(0,0,0,0.7);
+$evox-separator-margin-top:40px;
+$evox-separator-margin-bottom:40px;
+
+$evox-table-border-color:rgba(0,0,0,0.15);
+$evox-table-padding:5px 10px;
+$evox-table-hasbg-text-color:$evox-heading-color;
+$evox-table-stripes-bg-old:#f0f0f0;
+
+$evox-tagcloud-border-radius:0;
+$evox-tagcloud-bg:#F5F2ED;
+$evox-tagcloud-font-size:$evox-category-size !important;
+$evox-tagcloud-border:none;
+$evox-tagcloud-color:$evox-body-color;
+$evox-tagcloud-margin:0 10px 10px 0;
+$evox-tagcloud-padding:4px 15px 6px;
+
+$evox-preformatted-padding:15px;
+$evox-preformatted-border:1px solid rgba(0,0,0,0.15);
+
+$evox-archive-bg:#fff;
+
+$evox-widget-bg: #ffffff;
+$evox-box-shadow: 0 5px 20px rgba(170,170,170,0.1);
+
+$evox-sidebar-heading-margin-bottom:30px;
+$evox-sidebar-heading-padding-bottom:20px;
+$evox-sidebar-widget-padding:25px 30px 30px;
+$evox-sidebar-widget-margin:40px;
+$evox-sidebar-widget-bg:#fff;

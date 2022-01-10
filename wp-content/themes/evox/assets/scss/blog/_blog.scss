@@ -1,0 +1,116 @@
+.templaza-basic-page-content{
+  background:$evox-single-content_bg;
+  padding:$evox-single-content_padding;
+  .templaza-basic-page-content{
+    padding:0;
+  }
+  p{
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+div.templaza-archive{
+  .templaza-archive-item{
+    @include box-shadow($evox-box-shadow);
+    margin-bottom: 0;
+    .title{
+      a {
+        color: inherit;
+      }
+    }
+    &.uk-card{
+      span.category{
+        color:#999;
+      }
+      .ui-title{
+        a{
+          color:$evox-theme-color;
+        }
+      }
+    }
+    .templaza-blog-item-content{
+      background-color: $evox-archive-bg;
+      padding:$evox-title-blog-list-padding;
+      .templaza-blog-desc{
+        p{
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+      .templaza-blog-item-info{
+        margin-top: 25px;
+        color:$evox-meta-color;
+        &.templaza-post-meta-header{
+          margin-top: 0;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  .wp-block-pullquote{
+    border:none;
+    blockquote{
+      margin:0;
+      &:before{
+        color:$evox-theme-color;
+      }
+    }
+    p{
+      color:$evox-heading-color;
+    }
+    cite{
+      color:$evox-body-color;
+    }
+  }
+}
+.templaza-blog-item-link{
+  padding: $evox-pullquote-padding;
+  .link-icon{
+    font-size: 1.5rem;
+    color:$evox-theme-color;
+  }
+  .link-content{
+    line-height: $evox-pullquote-line-height;
+    margin: 30px 0 0;
+  }
+  a{
+    font-family: $evox-quote-font;
+    font-size: $evox-quote-font-size;
+    font-style: $evox-pullquote-font-style;
+    font-weight: $evox-pullquote-font-weight;
+  }
+}
+.templaza-blog-item .templaza-archive-gallery .uk-slidenav{
+  &.uk-slidenav-previous,
+  &.uk-slidenav-next{
+    @include border-radius(0);
+  }
+}
+div.templaza-sidebar {
+  ul, ol{
+    li {
+      margin: 10px 0;
+      font-size: $evox-category-size;
+      a {
+        color: inherit;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.templaza-sticky .templaza-blog-item-title a {
+  text-decoration: underline;
+}
+.templaza-blog-list{
+  .templaza-blog-desc{
+    p{
+      &:empty{
+        display:none;
+      }
+    }
+  }
+}

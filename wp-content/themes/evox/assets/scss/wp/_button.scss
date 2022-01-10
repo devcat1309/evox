@@ -1,0 +1,42 @@
+form{
+  input[type="submit"], button{
+    font-size:$evox-button-font-size;
+    line-height: 1em;
+    padding-left: 30px;
+    padding-right: 30px;
+    @include border-radius(0);
+    text-transform:$evox-button-transform;
+    font-weight:$evox-button-font-weight;
+  }
+  &.post-password-form{
+    .post-password-form__input{
+      width:auto;
+      min-width: 50%;
+      margin-right: 0;
+    }
+  }
+}
+.templaza-btn{
+  @include tz-basic-button-style();
+  text-align: center;
+  height:$evox-input-height;
+  justify-content: center;
+  align-items: center;
+  font-family: $evox-button-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:hover{
+    color:$evox-button-color-hover;
+    border-color:transparent;
+  }
+}
+.uk-lightbox, .uk-modal{
+  button{
+    &.uk-close{
+      padding:5px;
+      height:auto;
+      line-height: unset;
+      background:none;
+    }
+  }
+}

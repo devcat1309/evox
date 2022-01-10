@@ -1,0 +1,19 @@
+.is-root-container > .wp-block{
+	&.wp-block-preformatted{
+		padding: $evox-preformatted-padding;
+	}
+}
+pre.wp-block-preformatted {
+	overflow-x: auto;
+	white-space: pre !important;
+	font-family: $evox-body-font;
+	font-size: $evox-meta-font-size;
+	color:$evox-body-color;
+	line-height: $evox-body-line-height;
+	font-weight:$evox-body-font-weight;
+	padding:$evox-preformatted-padding;
+	border:$evox-preformatted-border;
+	&.has-background{
+		padding:$evox-spacing-vertical;
+	}
+}

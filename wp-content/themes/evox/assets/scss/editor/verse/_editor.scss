@@ -1,0 +1,14 @@
+.is-root-container > .wp-block{
+	&.wp-block-verse{
+		padding: $evox-preformatted-padding;
+	}
+}
+pre.wp-block-verse {
+	font-family: $evox-body-font;
+	font-size: $evox-meta-font-size;
+	color:$evox-body-color;
+	line-height: $evox-body-line-height;
+	font-weight:$evox-body-font-weight;
+	padding:$evox-preformatted-padding;
+	border:$evox-preformatted-border;
+}

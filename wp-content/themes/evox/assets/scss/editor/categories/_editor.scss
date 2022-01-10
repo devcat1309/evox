@@ -1,0 +1,48 @@
+.block-editor-block-list__layout{
+	&.wp-block-latest-comments
+	{
+		padding:0;
+	}
+}
+ul{
+	&.wp-block-archives,
+	&.widget_meta,
+	&.wp-block-page-list,
+	&.wp-block-categories,
+	&.wp-block-categories__list{
+		padding:0;
+		li{
+			list-style: none;
+			margin:$evox-list-margin;
+			font-size: $evox-category-size;
+			a{
+				color:inherit;
+				&:hover{
+					color:inherit;
+					text-decoration: underline;
+				}
+			}
+			&:before{
+				//display:none;
+				content:"\f105";
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				color:$evox-body-color;
+				padding-right:10px;
+				@include transition($evox-transition);
+			}
+			&.current-cat,
+			&:hover{
+				&:before{
+					color:$evox-theme-color;
+					@include transition($evox-transition);
+				}
+				a{
+					color:$evox-category-list-current-color;
+					@include transition($evox-transition);
+				}
+			}
+
+		}
+	}
+}

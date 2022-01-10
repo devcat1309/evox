@@ -1,0 +1,155 @@
+.wp-block-pullquote {
+	padding: $evox-pullquote-padding;
+	text-align: center;
+	border-width: $evox-pullquote-border-width;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	color: currentColor;
+	border-color: currentColor;
+	position: relative;
+	&:before{
+		display: none;
+	}
+	blockquote{
+		font-style: $evox-pullquote-font-style;
+		border: none;
+		padding-left:0;
+	}
+
+	blockquote::before {
+		color: currentColor;
+		content: "\f10e";
+		display: none;
+		position: relative; // Override the absolute position.
+		left: 0;
+		font-size: 1.5rem;
+		font-weight: 900;
+		line-height: 1;
+		font-family: "Font Awesome 5 Free";
+		color:$evox-theme-color;
+	}
+
+	p {
+		font-family: $evox-quote-font;
+		font-size: $evox-quote-font-size;
+		font-style: $evox-pullquote-font-style;
+		font-weight: $evox-pullquote-font-weight;
+		line-height: $evox-pullquote-line-height;
+		margin: 0;
+		&:last-of-type{
+			margin-bottom:10px;
+		}
+	}
+
+	a {
+		color: currentColor;
+	}
+
+	.wp-block-pullquote__citation,
+	cite,
+	footer {
+		font-size: $evox-pullquote-font-cite;
+		font-style: $evox-pullquote-font-style;
+		text-transform: none;
+		font-family: $evox-body-font;
+	}
+
+	// Block Options
+	&:not(.is-style-solid-color) {
+		background: none;
+	}
+
+	&.is-style-solid-color {
+		margin-left: auto;
+		margin-right: auto;
+		padding: $evox-pullquote-padding;
+		border-width: $evox-pullquote-border-width;
+		border-style: solid;
+		color:$evox-pullquote-color;
+		border-color: currentColor;
+
+		@media ( max-width: 600px ) {
+			padding: $evox-pullquote-padding-mobile;
+		}
+
+		blockquote::before {
+			text-align: left;
+		}
+
+		&.alignleft blockquote,
+		&.alignright blockquote {
+			max-width: inherit;
+		}
+
+		blockquote {
+			margin: 0;
+			max-width: 100%;
+
+			p {
+				font-size: $evox-quote-font-size;
+			}
+		}
+
+		.wp-block-pullquote__citation,
+		cite,
+		footer {
+			color: currentColor;
+		}
+	}
+	&.alignleft,
+	&.alignright{
+		padding: $evox-spacing-vertical;
+	}
+	&.alignleft{
+		margin-right: $evox-spacing-horizontal;
+	}
+	&.alignright{
+		margin-left: $evox-spacing-horizontal;
+	}
+	&.alignwide{
+		margin: $evox-pullquote-wide-margin;
+	}
+	&.alignfull{
+		width:100%;
+	}
+
+}
+
+.wp-block[data-align="full"] {
+
+	.wp-block-pullquote:not(.is-style-solid-color) {
+
+		blockquote {
+			padding: 0 ;
+		}
+	}
+}
+
+.wp-block[data-align="left"],
+.wp-block[data-align="right"] {
+
+	.wp-block-pullquote.is-style-solid-color {
+		padding: $evox-spacing-vertical;
+	}
+}
+.wp-block[data-align="left"]{
+	.wp-block-pullquote.is-style-solid-color {
+		margin-right: $evox-spacing-horizontal;
+	}
+}
+.wp-block[data-align="right"]{
+	.wp-block-pullquote.is-style-solid-color {
+		margin-left: $evox-spacing-horizontal;
+	}
+}
+.wp-block[data-align="wide"]{
+	.wp-block-pullquote.is-style-solid-color {
+		margin-left: $evox-spacing-horizontal;
+	}
+}
+@media screen and (max-width: 768px) {
+	.wp-block-pullquote{
+		padding:40px;
+	}
+
+}

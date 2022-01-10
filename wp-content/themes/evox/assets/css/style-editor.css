@@ -5,7 +5,7 @@ body {
   border: none;
   margin: 0;
   padding: 0;
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -214,7 +214,7 @@ hr {
   -ms-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 .wp-block-button__link:not(:hover):not(:active):not(.has-text-color) {
   color: #060606;
@@ -362,15 +362,32 @@ ul.wp-block-archives li a:hover, ul.widget_meta li a:hover, ul.wp-block-page-lis
   text-decoration: underline;
 }
 ul.wp-block-archives li:before, ul.widget_meta li:before, ul.wp-block-page-list li:before, ul.wp-block-categories li:before, ul.wp-block-categories__list li:before {
-  display: none;
   content: "\f105";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  color: #FED23D;
+  color: #55595a;
   padding-right: 10px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
-ul.wp-block-archives li.current-cat a, ul.widget_meta li.current-cat a, ul.wp-block-page-list li.current-cat a, ul.wp-block-categories li.current-cat a, ul.wp-block-categories__list li.current-cat a {
+ul.wp-block-archives li.current-cat:before, ul.wp-block-archives li:hover:before, ul.widget_meta li.current-cat:before, ul.widget_meta li:hover:before, ul.wp-block-page-list li.current-cat:before, ul.wp-block-page-list li:hover:before, ul.wp-block-categories li.current-cat:before, ul.wp-block-categories li:hover:before, ul.wp-block-categories__list li.current-cat:before, ul.wp-block-categories__list li:hover:before {
+  color: #FED23D;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+ul.wp-block-archives li.current-cat a, ul.wp-block-archives li:hover a, ul.widget_meta li.current-cat a, ul.widget_meta li:hover a, ul.wp-block-page-list li.current-cat a, ul.wp-block-page-list li:hover a, ul.wp-block-categories li.current-cat a, ul.wp-block-categories li:hover a, ul.wp-block-categories__list li.current-cat a, ul.wp-block-categories__list li:hover a {
   color: #060606;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .is-root-container > .wp-block.wp-block-code {
@@ -637,7 +654,7 @@ h5,
 h6,
 .h6 {
   clear: both;
-  font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   color: #060606;
 }
@@ -768,8 +785,8 @@ h6,
 }
 .wp-block-latest-comments .wp-block-latest-comments__comment {
   /* Vertical margins logic */
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: calc(0.75 * 20px);
+  margin-bottom: calc(0.75 * 20px);
 }
 .wp-block-latest-comments .wp-block-latest-comments__comment:first-child {
   margin-top: 0;
@@ -785,7 +802,7 @@ h6,
   font-size: 1.2rem;
   line-height: 1.5;
   font-weight: 400;
-  font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 .wp-block-latest-comments .wp-block-latest-comments__comment-meta a:hover {
   text-decoration: underline;
@@ -805,8 +822,8 @@ h6,
   padding: 0;
 }
 .wp-block-latest-posts:not(.is-grid) > li {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: calc(0.75 * 20px);
+  margin-bottom: calc(0.75 * 20px);
 }
 .wp-block-latest-posts:not(.is-grid) > li:first-child {
   margin-top: 0;
@@ -841,7 +858,7 @@ h6,
   line-height: 1.2em;
   margin-bottom: calc(0.333 * 20px);
   color: #55595a;
-  font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 .wp-block-latest-posts > li > a:hover {
   color: #060606;
@@ -1102,7 +1119,7 @@ p.has-background {
 pre.wp-block-preformatted {
   overflow-x: auto;
   white-space: pre !important;
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 0.875rem;
   color: #55595a;
   line-height: 1.7;
@@ -1164,7 +1181,7 @@ pre.wp-block-preformatted.has-background {
   font-size: 0.9rem;
   font-style: normal;
   text-transform: none;
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: "Cormorant Garamond", serif;
 }
 .wp-block-pullquote:not(.is-style-solid-color) {
   background: none;
@@ -1303,6 +1320,14 @@ blockquote.wp-block-quote:before {
   line-height: 1;
   font-family: "Font Awesome 5 Free";
 }
+blockquote cite {
+  color: #55595a;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.9rem;
+}
+blockquote cite em {
+  color: #55595a;
+}
 
 .wp-block-quote {
   position: relative;
@@ -1338,7 +1363,7 @@ blockquote.wp-block-quote:before {
 }
 .wp-block-quote cite {
   color: #55595a;
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 0.9rem;
 }
 .wp-block-quote cite em {
@@ -1448,7 +1473,7 @@ blockquote.wp-block-quote:before {
 }
 .wp-block-rss .wp-block-rss__item-title > a {
   display: inline-block;
-  font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.1em;
@@ -1730,7 +1755,7 @@ table tfoot,
 }
 table th,
 .wp-block-table th {
-  font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 table td,
 table th,
@@ -1855,7 +1880,7 @@ table.wp-calendar-table caption {
   margin-top: 0;
 }
 .wp-block.editor-post-title__block .editor-post-title__input {
-  font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 3.25rem;
   font-weight: 600;
   color: #fff;
@@ -1871,7 +1896,7 @@ table.wp-calendar-table caption {
 }
 
 pre.wp-block-verse {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 0.875rem;
   color: #55595a;
   line-height: 1.7;

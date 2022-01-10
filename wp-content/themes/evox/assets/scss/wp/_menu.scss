@@ -1,0 +1,73 @@
+body .templaza-header{
+  .navbar-nav{
+    .menu-item{
+      >.sub-menu{
+        @include box-shadow(none);
+        min-width:250px;
+        padding:10px 0;
+        li.menu-item{
+          padding:0 30px;
+          >a{
+            padding:15px 0;
+            font-size:1em;
+            border-bottom:1px solid rgba(255,255,255,0.1);
+          }
+          &:last-child{
+            >a{
+              border-bottom:none;
+            }
+          }
+        }
+        &.megamenu-sub-menu{
+          .sub-menu{
+            min-width: 0;
+            li{
+              padding:0;
+            }
+          }
+          .nav-submenu{
+            .menu-item{
+              .has-children{
+                border:none;
+              }
+            }
+          }
+        }
+        ul{
+          li{
+            padding:0;
+          }
+        }
+        .sub-menu{
+          padding:10px 0;
+        }
+
+      }
+    }
+    > .menu-item{
+      &:first-child{
+        >a{
+          padding-left: 0 !important;
+        }
+      }
+    }
+  }
+}
+.templaza-mobilemenu {
+  font-size: 0.875rem;
+}
+.templaza-nav{
+  .megamenu-sub-menu{
+    .megamenu-item-link{
+      &.has-children{
+        padding-bottom:5px !important;
+        .megamenu-title{
+          font-size:20px;
+          color:#fff;
+          font-family: $evox-heading-font;
+          font-weight: $evox-heading-font-weight;
+        }
+      }
+    }
+  }
+}

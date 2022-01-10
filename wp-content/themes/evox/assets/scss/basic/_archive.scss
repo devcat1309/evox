@@ -1,0 +1,137 @@
+.uk-article.sticky {
+  .entry-title a {
+    text-decoration: underline;
+  }
+}
+.evox-sticky-post-no-thumbnail {
+  color: $evox-theme-color;
+}
+.navigation {
+  .nav-links{
+    display:flex;
+    justify-content: center;
+    .page-numbers {
+      @include tz-pagination-style();
+    }
+
+  }
+}
+.comment-form{
+  .comment-form-comment{
+    label{
+      display:block;
+      margin:5px 0;
+    }
+  }
+  textarea{
+    width:100%;
+    border: 1px solid $evox-border-color;
+    padding:10px 15px;
+    height:110px;
+    max-width: 100%;
+    line-height: 1.5em;
+    &:focus-visible{
+      outline: none;
+    }
+  }
+  .form-submit{
+    input{
+      background:$evox-button-bg;
+      color:$evox-button-color;
+      padding:$evox-input-button-padding;
+      border-radius:$evox-button-radius;
+      font-size:$evox-button-font-size;
+      border-color:transparent;
+      @include transition($evox-transition);
+      &:hover{
+        background:$evox-button-bg-hover;
+        cursor: pointer;
+        @include transition($evox-transition);
+      }
+    }
+  }
+}
+.page-links{
+  clear:both;
+  padding-top:10px;
+}
+.templaza-archive{
+  .templaza-blog-item-title{
+    font-size: $evox-title-blog-list-size;
+    font-weight: $evox-title-blog-list-weight;
+    line-height: $evox-heading-line-height;
+    a{
+      color:inherit;
+    }
+    @media (max-width: 960px) {
+      font-size: $evox-title-blog-list-size-small;
+    }
+  }
+  .templaza-blog-item{
+    .uk-card-footer{
+      border-top:1px solid $evox-border-color;
+      background:$evox-archive-bg;
+      color:$evox-meta-color;
+    }
+
+  }
+  .more-link{
+    color:$evox-theme-color;
+    &:hover{
+      color:$evox-theme-color;
+    }
+  }
+}
+.templaza-basic-single-heading{
+  .page-title{
+    font-weight:$evox-title-page-weight;
+  }
+  .entry-title{
+    font-weight:$evox-title-single-weight;
+  }
+}
+figure.post-thumbnail {
+  display: flex;
+  margin-bottom: 40px;
+  flex-direction: column;
+  .wp-caption-text {
+    margin-bottom: 0;
+  }
+}
+.templaza-blog-item-info, .ui-posts .uk-article-meta{
+  > span{
+    &:not(:last-child){
+      &:after{
+        display:none;
+      }
+    }
+    &:not(:first-child){
+      &:before{
+        content:"";
+        @include border-radius(50%);
+        background: $evox-meta-color;
+        height:5px;
+        width:5px;
+        display:inline-block;
+        margin:0 12px 3px;
+      }
+    }
+    &.tag{
+      a{
+        &:not(:last-child){
+
+        }
+      }
+    }
+    &.author{
+      a{
+        color:$evox-heading-color;
+      }
+    }
+  }
+}
+.templaza-blog-item-info {
+  > span {
+    font-size:$evox-meta-font-size;
+  }
+}

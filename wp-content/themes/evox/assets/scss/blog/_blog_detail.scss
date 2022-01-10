@@ -1,0 +1,77 @@
+.templaza-single{
+  .templaza-blog-share-icon{
+    a{
+      background:#f8f9fa;
+      padding:0.5rem 1rem;
+      color:$evox-quote-color;
+      @include transition($evox-transition);
+      font-weight:600;
+      font-size:0.8em;
+      @include border-radius(3px);
+      &:not(:last-child){
+        margin-right:5px;
+        margin-bottom: 5px;
+        float:left;
+        line-height: 1em;
+      }
+      &:hover{
+        color:$evox-button-color_hover;
+        @include transition($evox-transition);
+        background:$evox-button-bg_hover;
+      }
+    }
+  }
+  .templaza-blog-item-share{
+    span.label{
+      display:none;
+    }
+  }
+  .templaza-single-preview-post,
+  .templaza-single-next-post
+  {
+    a{
+      color:$evox-meta-color;
+      &:hover{
+        color:$evox-theme-color;
+      }
+    }
+  }
+  .templaza-single-author{
+    .templaza-block-author-desc{
+      p{
+        font-size:0.9em;
+      }
+      .templaza-block-author-social{
+        a{
+          color:$evox-meta-color;
+          font-size:0.7em;
+        }
+      }
+    }
+  }
+  iframe{
+    width:100%;
+  }
+  .templaza-single-box{
+    background:$evox-single-content_bg;
+    padding:$evox-single-content_padding;
+    p{
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    .templaza-single-content-content{
+      &:after{
+        content:"";
+        display:block;
+        clear:both;
+      }
+    }
+    .wp-block-cover, .wp-block-cover-image{
+      margin-bottom: 20px;
+    }
+  }
+}
+h1.templaza-blog-item-title {
+  font-weight: 600;
+}

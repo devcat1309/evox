@@ -1,0 +1,159 @@
+.wp-block-latest-posts {
+	padding: 0;
+
+	// Vertical margins logic
+	&:not(.is-grid) > li {
+		margin-top: calc(0.75 * #{$evox-spacing-vertical});
+		margin-bottom: calc(0.75 * #{$evox-spacing-vertical});
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&.is-grid {
+		word-wrap: break-word;
+		word-break: break-word;
+
+		> li {
+			margin-bottom: $evox-spacing-vertical;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	> li > * {
+		margin-top: calc(0.333 * #{$evox-spacing-vertical});
+		margin-bottom: calc(0.333 * #{$evox-spacing-vertical});
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	// Post title
+	> li > a {
+		display: inline-block;
+		font-size: $evox-latest-posts-size;
+		font-weight: $evox-latest-posts-weight;
+		line-height: $evox-latest-posts-line-height;
+		margin-bottom: calc(0.333 * #{$evox-spacing-vertical});
+		color:$evox-body-color;
+		font-family: $evox-latest-font;
+		&:hover{
+			color:$evox-heading-color-hover;
+		}
+	}
+	.wp-block-latest-posts__featured-image{
+		&.alignleft{
+			width:25%;
+			margin-right:20px;
+			margin-bottom:0;
+			~ .wp-block-latest-posts__post-author, ~ a,
+			~ .wp-block-latest-posts__post-date{
+				padding-left: calc(25% + 20px);
+				display:block;
+			}
+		}
+	}
+
+	// Post author
+	.wp-block-latest-posts__post-author {
+		color: $evox-meta-color;
+		font-size: $evox-meta-font-size;
+		line-height:$evox-meta-line-height;
+	}
+
+	// Post date
+	.wp-block-latest-posts__post-date {
+		color: $evox-meta-color;
+		font-size: $evox-meta-font-size;
+		line-height:$evox-meta-line-height;
+
+		[class*="inner-container"] &,
+		.has-background & {
+			color: currentColor;
+		}
+	}
+
+	// Post content
+	.wp-block-latest-posts__post-excerpt,
+	.wp-block-latest-posts__post-full-content {
+		margin-top: calc(0.666 * #{$evox-spacing-vertical});
+	}
+
+	// Block Styles
+	&.is-style-templaza-latest-posts-dividers {
+		border-top: $evox-latest-posts-divi-border;
+		border-bottom: $evox-latest-posts-divi-border;
+
+		&:not(.is-grid) > li,
+		> li {
+			padding-bottom: $evox-spacing-vertical;
+			border-bottom: $evox-latest-posts-divi-item;
+			margin-top: $evox-spacing-vertical;
+			margin-bottom: $evox-spacing-vertical;
+
+			&:last-child {
+				padding-bottom: 0;
+				border-bottom: none;
+			}
+		}
+
+		&.is-grid {
+			// Border moves up 1px to overlap the li borders in the last row.
+			border-bottom: $evox-latest-posts-divi-item;
+
+			li {
+				margin: 0;
+				padding-top: $evox-spacing-vertical;
+				padding-right: $evox-spacing-horizontal;
+
+				&:last-child {
+					padding-bottom: $evox-spacing-vertical;
+				}
+			}
+
+			// This is using a non-standard media query because it is directly overriding the gutenberg-provided widths.
+			// https://github.com/WordPress/gutenberg/blob/master/packages/block-library/src/latest-posts/style.scss#L28-L34
+			@media screen and (min-width: 600px) {
+				@for $i from 2 through 6 {
+					&.columns-#{ $i } li {
+						width: calc((100% / #{ $i }));
+					}
+				}
+			}
+		}
+	}
+
+	&.is-style-templaza-latest-posts-borders {
+
+		li {
+			border: $evox-latest-posts-divi-item;
+			padding: $evox-spacing-vertical $evox-spacing-horizontal;
+
+			&:last-child {
+				padding-bottom: $evox-spacing-vertical;
+				margin-bottom: $evox-spacing-vertical;
+			}
+		}
+
+		&:not(.is-grid) li {
+			margin-top: $evox-spacing-horizontal;
+			margin-bottom: $evox-spacing-horizontal;
+		}
+	}
+	&.alignleft{
+		float:none;
+	}
+}

@@ -1,0 +1,14 @@
+.wp-block-query {
+
+	&.has-background {
+		padding: calc(0.666 * #{$evox-spacing-vertical});
+	}
+	ul{
+		li{
+			margin-bottom: calc(2 * #{$evox-spacing-vertical});
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}

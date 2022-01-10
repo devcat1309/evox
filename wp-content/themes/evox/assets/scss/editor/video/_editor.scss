@@ -1,0 +1,15 @@
+.wp-block-video {
+	figcaption {
+		color: var(--global--color-primary);
+		font-size: $evox-figcaption-size;
+		margin-top: $evox-figcaption-margin-top;
+		margin-bottom: $evox-figcaption-margin-bottom;
+		text-align: center;
+	}
+}
+
+* > figure > video {
+	max-width: unset;
+	width: 100%;
+	vertical-align: middle;
+}

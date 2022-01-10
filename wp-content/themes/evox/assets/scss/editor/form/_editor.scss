@@ -1,0 +1,30 @@
+input[type="submit"]{
+	background:$evox-button-bg;
+	color:$evox-button-color;
+	padding:$evox-input-button-padding;
+	font-family: $evox-button-font-family;
+	font-size:$evox-button-font-size;
+	border-color:transparent;
+	border-radius:$evox-button-radius;
+	@include transition($evox-transition);
+	&:hover{
+		background:$evox-button-bg-hover;
+		cursor: pointer;
+		@include transition($evox-transition);
+	}
+}
+select,input{
+	height: $evox-input-line-height;
+	border: $evox-input-border;
+	border-radius: $evox-input-border-radius;
+	font-family: inherit;
+	line-height: 38px;
+	max-width: inherit;
+	padding: $evox-input-padding;
+	margin-right:5px;
+	margin-top: 0;
+	font-weight: $evox-form-input-weight;
+	&:focus-visible{
+		outline:none;
+	}
+}

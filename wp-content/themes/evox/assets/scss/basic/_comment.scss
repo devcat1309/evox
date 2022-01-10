@@ -1,0 +1,161 @@
+.templaza-single-comment{
+  .comment-list .comments{
+    padding-bottom:0;
+    margin-bottom:0;
+    border:none;
+    display:flex;
+    .comment-content{
+      padding-left:0;
+      margin-top:0;
+      .comment-head{
+        display:block;
+        a{
+          color:$evox-heading-color;
+        }
+      }
+    }
+  }
+}
+.comments-area{
+  clear:both;
+  h3.comment-reply-title{
+    margin-bottom: 30px;
+  }
+}
+.comment-list{
+  padding-left:0;
+  .comment-body {
+    background: #fff;
+    padding: 30px;
+  }
+  li{
+    &.trackback,
+    &.pingback{
+      list-style: none;
+      margin-bottom: 30px;
+    }
+    a{
+      color:$evox-heading-color;
+    }
+    .edit-link{
+      float:right;
+      a{
+        color:$evox-a-color;
+      }
+    }
+  }
+  > .comment{
+    list-style: none;
+    border-bottom:none;
+    margin-bottom:40px;
+    .comment-author{
+      font-size: 1.2129rem;
+      font-weight: 600;
+      font-family: $evox-heading-font;
+      img{
+        border-radius:50%;
+        float:left;
+        margin-right: 30px;
+      }
+      a{
+        color:$evox-heading-color;
+        font-weight: normal;
+      }
+      .says{
+        display:none;
+      }
+    }
+    .comment-metadata{
+      font-size: 0.875rem;
+      color:$evox-meta-color;
+      margin-top: 5px;
+      .edit-link{
+        float:right;
+      }
+      a{
+        color:$evox-meta-color;
+        &:hover{
+          color:$evox-meta-color-hover;
+        }
+        &.comment-edit-link{
+          color: $evox-heading-color;
+          font-weight: bold;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .comment-content{
+      clear:both;
+      margin-top: 15px;
+      padding-left:105px;
+      img{
+        margin: 5px 0;
+      }
+    }
+    .reply{
+      padding-left:105px;
+      a {
+        font-family: $evox-heading-font;
+        font-size:1rem;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .comment-respond{
+      margin-left:105px;
+      margin-top: 20px;
+      padding: 30px;
+      border: none;
+      @include box-shadow($evox-theme-shadow);
+      background:$evox-archive-bg;
+      .comment-reply-title {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size:1.3em;
+      }
+    }
+    .children{
+      padding-top: 40px;
+      padding-left: 40px;
+      li{
+        list-style: none;
+        margin-bottom:40px;
+        margin-top: 0;
+        &:last-child{
+          border: none;
+          padding-bottom:0;
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+      }
+    }
+    &:last-child{
+      border: none;
+    }
+  }
+  .comments{
+    .comment-author{
+      img{
+        @include border-radius(50%);
+      }
+    }
+  }
+}
+.templaza-mobile-btn{
+  display:none;
+}
+form{
+  input[type="text"],
+  input[type="email"],
+  input[type="search"]{
+    margin-top:15px;
+    border-color:$evox-border-color;
+  }
+}
+.comment-form textarea{
+  display:block;
+}
